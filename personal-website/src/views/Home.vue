@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <HelloWorld/>
+  <div class="home">
+    <p>Entrepreneur that happens to know how to code.</p>
   </div>
 </template>
 
-<script>
-import HelloWorld from '../components/HelloWorld.vue';
 
+<script>
 export default {
-  name: 'Home',
-  
-  components: {
-    HelloWorld,
-  },
+  name: "Home",
+
+  components: {},
 };
 </script>
+
+<style>
+.nav-title {
+  color: #3a7bc6 !important;
+  margin-left: 5vw;
+}
+</style>
