@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
-    <h1>This is an experiences page</h1>
+  <div class="blog">
+    <h1>This is a blogs page</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About",
+  name: "Blog",
 
   components: {},
 };
