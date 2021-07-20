@@ -1,30 +1,20 @@
 <template>
-  <div>
-    <v-app-bar flat>
+  <div class="header-container">
+    <v-app-bar :absolute="false" flat color="transparent">
       <v-app-bar-title shrink-on-scroll class="nav-title">
-        <v-btn
-          :to="{ name: 'Home' }"
-          size="large"
-          style="text-decoration: none; color: black"
+        <router-link to="/" style="text-decoration: none; color: white"
+          >JUSTIN CHO</router-link
         >
-          justin-mingi-cho.com
-        </v-btn>
-        <!-- <router-link to="/" style="text-decoration: none; color: black"
-          >JUSTIN-MINGI-CHO</router-link
-        > -->
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <v-btn rounded="lg" :to="{ name: 'About' }">About</v-btn>
-        <v-btn rounded="lg" :to="{ name: 'Blog' }">Blog</v-btn>
-        <v-btn rounded="lg" href="/resume.pdf" target="_blank">Resume</v-btn>
-        <v-btn
-          rounded="lg"
-          href="https://www.linkedin.com/in/justinmcho/"
-          target="_blank"
-          >Linkedin</v-btn
+        <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
+          >About Me</v-btn
         >
-        <!-- <v-btn rounded="lg">{{ $vuetify.lang.t("$vuetify.message") }}</v-btn> -->
+        <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
+          >Blog</v-btn
+        >
+        <!-- <v-btn rounded="lg" href="/resume.pdf" target="_blank">Resume</v-btn> -->
 
         <!-- <v-btn size="small">KOR</v-btn>
         <v-divider vertical></v-divider>
@@ -42,19 +32,11 @@
     >
       <v-list nav dense>
         <v-list-item>
-          <v-list-item-title>Foo</v-list-item-title>
+          <v-list-item-title>About Me</v-list-item-title>
         </v-list-item>
 
         <v-list-item>
-          <v-list-item-title>Bar</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item>
-          <v-list-item-title>Fizz</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item>
-          <v-list-item-title>Buzz</v-list-item-title>
+          <v-list-item-title>Blog</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -97,13 +79,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.header-container {
+  background-color: transparent !important;
+}
 .logo-title {
   background-color: transparent !important;
 }
 .nav-title {
-  color: black !important;
-  margin-left: 5vw;
+  color: white !important;
 }
 .nav-buttons {
   margin-right: 5vw;
