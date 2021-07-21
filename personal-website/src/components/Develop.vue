@@ -11,8 +11,11 @@
         <span class="json-key">"values"</span>: "Develop ideas for a
         purpose",<br />
         <span class="json-key">"mbti"</span>: "ENTP",<br />
-        <span class="json-key">developer-mode</span>:
-        <span style="color: #87c7ed">true</span> <br />
+        <div class="dev">
+          <span class="json-key">"developer-mode"</span>:
+          <span style="color: #87c7ed">true</span>
+          <div>hi</div>
+        </div>
       </div>
       <span style="color: yellow">}</span>
     </div>
@@ -29,9 +32,15 @@ export default {
 <style scoped>
 .json {
   font-size:39px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .json-key {
   color: #aed9e0;
   padding-left: 2.5vw;
+}
+.dev {
+  display:flex;
+  flex:1;
+  flex-direction:row;
 }
 </style>

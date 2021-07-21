@@ -1,6 +1,8 @@
 <template>
   <div class="home-container">
-    <Developer v-if="developerMode"></Developer>
+    <Developer v-if="developerMode">
+      
+    </Developer>
     <HomeDescription v-else></HomeDescription>
     <button @click="developerMode = !developerMode" style="color:white; font-size:50px">{{developerMode}}</button>
   </div>
@@ -26,6 +28,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 .json {
   font-size:30px;
