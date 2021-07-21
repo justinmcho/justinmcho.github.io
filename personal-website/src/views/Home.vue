@@ -1,30 +1,20 @@
 <template>
   <div class="home-container">
-    <div style="color: white">
-      <span style="color: yellow">{</span><br />
-      <div>
-        <span class="json-key">"name"</span>: "Justin Min Gi Cho",<br />
-        <span class="json-key">"school"</span>: "UC Berkeley",<br />
-        <span class="json-key">"majors"</span>: "Computer Science and
-        Economics",<br />
-        <span class="json-key">"hobbies"</span>: "Entrepreneurship, singing,
-        volleyball",<br />
-        <span class="json-key">"values"</span>: "Develop ideas for a
-        purpose",<br />
-        <span class="json-key">"mbti"</span>: "ENTP",<br />
-        <span class="json-key">developer-mode</span>:
-        <span style="color: #87c7ed">true</span> <br />
-      </div>
-      <span style="color: yellow">}</span>
-    </div>
+    <Developer v-if="developerMode"></Developer>
+    <HomeDescription v-else></HomeDescription>
+    <button @click="developerMode = !developerMode" style="color:white; font-size:50px">{{developerMode}}</button>
   </div>
 </template>
 
-
 <script>
+import Developer from "../components/Develop.vue"
+import HomeDescription from "../components/HomeDescription.vue"
 export default {
   name: "Home",
-  components: {},
+  components: {Developer, HomeDescription},
+  data () {
+    return {developerMode: true}
+  }
 };
 </script>
 
@@ -38,11 +28,7 @@ export default {
   height: 100%;
 }
 .json {
-  /* display: flex;
-  flex-direction: row;
-  flex: 1; */
-  /* align-items: center;
-  justify-content: center; */
+  font-size:30px;
 }
 .json-key {
   color: #aed9e0;

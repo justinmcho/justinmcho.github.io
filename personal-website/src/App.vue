@@ -28,14 +28,13 @@ export default {
   flex: 1;
   background-image: url("./assets/seoul.jpg");
   background-size: cover;
-  background-position-y: -10vh;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 .container-cover {
   display: flex;
   flex: 1;
-  background-color: rgb(28, 28, 28, 0.3);
+  background-color: rgb(28, 28, 28, 0.4);
   background-size: cover;
 }
 </style>
