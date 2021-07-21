@@ -1,24 +1,23 @@
 <template>
-    <div class="json" style="color: white">
-      <span style="color: yellow">{</span><br />
-      <div>
-        <span class="json-key">"name"</span>: "Justin Min Gi Cho",<br />
-        <span class="json-key">"school"</span>: "UC Berkeley",<br />
-        <span class="json-key">"majors"</span>: "Computer Science and
-        Economics",<br />
-        <span class="json-key">"hobbies"</span>: "Entrepreneurship, singing,
-        volleyball",<br />
-        <span class="json-key">"values"</span>: "Develop ideas for a
-        purpose",<br />
-        <span class="json-key">"mbti"</span>: "ENTP",<br />
-        <div class="dev">
-          <span class="json-key">"developer-mode"</span>:
-          <span style="color: #87c7ed">true</span>
-          <div>hi</div>
-        </div>
+  <div class="json" style="color: white">
+    <span style="color: yellow">{</span><br />
+    <div>
+      <span class="json-key">"name"</span>: "Justin Min Gi Cho",<br />
+      <span class="json-key">"school"</span>: "UC Berkeley",<br />
+      <span class="json-key">"majors"</span>: "Computer Science and
+      Economics",<br />
+      <span class="json-key">"hobbies"</span>: "Entrepreneurship, singing,
+      volleyball",<br />
+      <span class="json-key">"values"</span>: "Develop ideas for a purpose",<br />
+      <span class="json-key">"mbti"</span>: "ENTP",<br />
+      <div class="dev">
+        <span class="json-key">"developer-mode"</span>:
+        <span style="color: #87c7ed">true</span>
+        <!-- <div>hi</div> -->
       </div>
-      <span style="color: yellow">}</span>
     </div>
+    <span style="color: yellow">}</span>
+  </div>
 </template>
 
 
@@ -31,16 +30,16 @@ export default {
 
 <style scoped>
 .json {
-  font-size:39px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 39px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .json-key {
   color: #aed9e0;
   padding-left: 2.5vw;
 }
 .dev {
-  display:flex;
-  flex:1;
-  flex-direction:row;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
 }
 </style>
