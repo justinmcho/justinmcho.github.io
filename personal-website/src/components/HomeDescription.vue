@@ -39,8 +39,6 @@ export default {
   },
   methods: {
     initiate(charIndex) {
-      console.log(this.currentIntro);
-      console.log(this.intro);
       if (this.currentIntro === this.intro) {
         this.introFinished = true;
       }
@@ -50,7 +48,6 @@ export default {
           this.initiate(charIndex + 1);
         }, this.typeSpeed);
       } else {
-        console.log("wrong place");
         this.typeText(0, 0);
       }
     },

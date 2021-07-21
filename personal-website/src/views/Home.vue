@@ -1,22 +1,25 @@
 <template>
   <div class="home-container">
-    <Developer v-if="developerMode">
-      
-    </Developer>
+    <Developer v-if="developerMode"></Developer>
     <HomeDescription v-else></HomeDescription>
-    <button @click="developerMode = !developerMode" style="color:white; font-size:50px">{{developerMode}}</button>
+    <button
+      @click="developerMode = !developerMode"
+      style="color: white; font-size: 50px"
+    >
+      {{ developerMode }}
+    </button>
   </div>
 </template>
 
 <script>
-import Developer from "../components/Develop.vue"
-import HomeDescription from "../components/HomeDescription.vue"
+import Developer from "../components/Develop.vue";
+import HomeDescription from "../components/HomeDescription.vue";
 export default {
   name: "Home",
-  components: {Developer, HomeDescription},
-  data () {
-    return {developerMode: true}
-  }
+  components: { Developer, HomeDescription },
+  data() {
+    return { developerMode: true };
+  },
 };
 </script>
 
@@ -31,7 +34,7 @@ export default {
   width: 100%;
 }
 .json {
-  font-size:30px;
+  font-size: 25px;
 }
 .json-key {
   color: #aed9e0;

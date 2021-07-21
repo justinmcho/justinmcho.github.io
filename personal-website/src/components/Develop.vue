@@ -11,7 +11,7 @@
       <span class="json-key">"values"</span>: "Develop ideas for a purpose",<br />
       <span class="json-key">"mbti"</span>: "ENTP",<br />
       <div class="dev">
-        <span class="json-key">"developer-mode"</span>:
+        <span class="json-key">"developer-mode"</span>:&nbsp;
         <span style="color: #87c7ed">true</span>
         <!-- <div>hi</div> -->
       </div>
