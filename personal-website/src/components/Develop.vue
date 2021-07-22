@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .json {
-  font-size: 39px;
+  font-size: 20px;
   font-family: "Noto Sans KR", sans-serif;
 }
 .json-key {

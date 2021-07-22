@@ -117,6 +117,8 @@ export default {
 
 <style scoped>
 .container-home-description {
+  width: 100vw;
+  margin-left: 35vw;
 }
 .description-container {
   display: flex;
