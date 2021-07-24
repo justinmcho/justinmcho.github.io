@@ -8,12 +8,12 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
+        <!-- <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
           >About Me</v-btn
         >
         <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
           >Blog</v-btn
-        >
+        > -->
         <!-- <v-btn rounded="lg" href="/resume.pdf" target="_blank">Resume</v-btn> -->
 
         <!-- <v-btn size="small">KOR</v-btn>
