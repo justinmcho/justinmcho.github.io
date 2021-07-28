@@ -9,6 +9,9 @@
     <div class="about-me-container">
       <AboutMe></AboutMe>
     </div>
+    <div class="about-me-2-container">
+      <AboutMe2></AboutMe2>
+    </div>
   </div>
 </template>
 
@@ -16,9 +19,10 @@
 import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
 import AboutMe from "../components/AboutMe.vue";
+import AboutMe2 from "../components/AboutMe2.vue";
 export default {
   name: "Home",
-  components: { HomeDescription, Developer, AboutMe },
+  components: { HomeDescription, Developer, AboutMe, AboutMe2 },
   data() {
     return { developerMode: true };
   },
@@ -50,14 +54,20 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
 .about-me-container {
   background-color: black;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.about-me-2-container {
+  background-color: #ad9a83;
+  height: 100%;
+  width: 100%;
   color: white;
 }
 </style>
