@@ -3,38 +3,44 @@
     <v-app-bar :absolute="false" flat color="transparent">
       <v-app-bar-title shrink-on-scroll class="nav-title">
         <router-link to="/" style="text-decoration: none; color: white"
-          >JUSTIN CHO</router-link
+          >JUSTIN MIN GI CHO</router-link
         >
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <!-- <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
+        <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
           >About Me</v-btn
         >
         <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
+          >Experience</v-btn
+        >
+        <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
           >Blog</v-btn
-        > -->
+        >
         <!-- <v-btn rounded="lg" href="/resume.pdf" target="_blank">Resume</v-btn> -->
 
-        <!-- <v-btn size="small">KOR</v-btn>
+        <!-- <v-btn class="text-white" size="small">KOR</v-btn>
         <v-divider vertical></v-divider>
-        <v-btn size="small">ENG</v-btn> -->
+        <v-btn class="text-white" size="small">ENG</v-btn> -->
       </div>
       <v-btn icon @click="toggleDrawerNav" v-show="mobile"
-        ><v-icon>mdi-menu</v-icon></v-btn
+        ><v-icon color="white">mdi-menu</v-icon></v-btn
       >
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
       position="right"
       temporary
-      priority="1"
+      color="transparent"
+      elevation="0"
     >
-      <v-list nav dense>
+      <v-list nav dense style="background-color: white">
         <v-list-item>
           <v-list-item-title>About Me</v-list-item-title>
         </v-list-item>
-
+        <v-list-item>
+          <v-list-item-title>Experience</v-list-item-title>
+        </v-list-item>
         <v-list-item>
           <v-list-item-title>Blog</v-list-item-title>
         </v-list-item>
@@ -69,7 +75,6 @@ export default {
     },
     toggleDrawerNav() {
       this.drawer = !this.drawer;
-      console.log(this.drawer);
     },
   },
   mounted() {

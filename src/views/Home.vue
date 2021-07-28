@@ -1,8 +1,13 @@
 <template>
-  <div class="home-container">
-    <div class="container-cover">
-      <HomeDescription v-if="developerMode"></HomeDescription>
-      <Developer v-else>></Developer>
+  <div class="container">
+    <div class="home-container">
+      <div class="container-cover">
+        <HomeDescription v-if="developerMode"></HomeDescription>
+        <Developer v-else>></Developer>
+      </div>
+    </div>
+    <div class="about-me-container">
+      <AboutMe></AboutMe>
     </div>
   </div>
 </template>
@@ -10,11 +15,12 @@
 <script>
 import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
+import AboutMe from "../components/AboutMe.vue";
 export default {
   name: "Home",
-  components: { HomeDescription, Developer },
+  components: { HomeDescription, Developer, AboutMe },
   data() {
-    return { developerMode: true, toggled: false };
+    return { developerMode: true };
   },
   methods: {
     checkClass() {},
@@ -23,6 +29,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  height: 100vh;
+  width: 100vw;
+}
 .home-container {
   display: flex;
   flex: 1;
@@ -40,8 +50,14 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 90%;
   width: 100%;
   overflow: hidden;
+}
+.about-me-container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  color: white;
 }
 </style>

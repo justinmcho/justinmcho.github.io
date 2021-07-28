@@ -5,8 +5,8 @@
       <span class="cursor"></span>
     </div>
     <div class="description">
-      I develop ideas for a purpose and share <br />
-      them with my community.
+      I develop ideas for a purpose and <br />
+      share them with my community.
     </div>
   </div>
 </template>
