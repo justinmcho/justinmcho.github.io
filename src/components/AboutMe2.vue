@@ -6,7 +6,7 @@
         >Hobbies: volleyball, singing<br />Location: South Korea<br />MBTI:
         ENTP</span
       >
-      <router-link :to="{ name: 'Blog' }" style="text-decoration: none"
+      <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
         ><div class="experiences-link">Click here for my experiences</div>
       </router-link>
     </div>

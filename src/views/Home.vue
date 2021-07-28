@@ -2,11 +2,11 @@
   <div class="container">
     <div class="home-container">
       <div class="container-cover">
-        <HomeDescription v-if="developerMode"></HomeDescription>
+        <HomeDescription id="top" v-if="developerMode"></HomeDescription>
         <Developer v-else>></Developer>
       </div>
     </div>
-    <div class="about-me-container">
+    <div id="about-me" class="about-me-container">
       <AboutMe></AboutMe>
     </div>
     <div class="about-me-2-container">

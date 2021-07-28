@@ -2,16 +2,18 @@
   <div class="header-container">
     <v-app-bar :absolute="false" flat color="transparent">
       <v-app-bar-title shrink-on-scroll class="nav-title">
-        <router-link to="/" style="text-decoration: none; color: white"
+        <router-link
+          :to="{ name: 'Home' }"
+          style="text-decoration: none; color: white"
           >JUSTIN MIN GI CHO</router-link
         >
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <v-btn rounded="lg" class="text-white" :to="{ name: 'About' }"
+        <v-btn rounded="lg" class="text-white" @click="scrollToAboutMe"
           >About Me</v-btn
         >
-        <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
+        <v-btn rounded="lg" class="text-white" :to="{ name: 'Experience' }"
           >Experience</v-btn
         >
         <v-btn rounded="lg" class="text-white" :to="{ name: 'Blog' }"
@@ -75,6 +77,10 @@ export default {
     },
     toggleDrawerNav() {
       this.drawer = !this.drawer;
+    },
+    scrollToAboutMe() {
+      var element = document.getElementById("about-me");
+      element.scrollIntoView({ behavior: "smooth" });
     },
   },
   mounted() {
