@@ -12,6 +12,7 @@
     <div class="about-me-2-container">
       <AboutMe2></AboutMe2>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -20,14 +21,22 @@ import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
 import AboutMe from "../components/AboutMe.vue";
 import AboutMe2 from "../components/AboutMe2.vue";
+
+import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
-  components: { HomeDescription, Developer, AboutMe, AboutMe2 },
+  components: { HomeDescription, Developer, AboutMe, AboutMe2, Footer },
   data() {
     return { developerMode: true };
   },
   methods: {
     checkClass() {},
+  },
+  mounted() {
+    document.getElementById("header-title").style.color = "white";
+    document.getElementById("header-button-aboutme").style.display = null;
+    document.getElementById("header-button-experience").style.color = "white";
+    document.getElementById("header-button-blog").style.color = "white";
   },
 };
 </script>
