@@ -1,11 +1,6 @@
 <template>
   <div class="header-container">
-    <v-app-bar
-      :absolute="false"
-      flat
-      color="transparent"
-      style="pointer-events: none"
-    >
+    <v-app-bar :absolute="true" flat color="transparent">
       <v-app-bar-title class="nav-title">
         <router-link
           id="header-title"
@@ -111,6 +106,8 @@ export default {
 
 <style scoped>
 .header-container {
+  position: fixed;
+  width: 100%;
   background-color: transparent !important;
 }
 .logo-title {
@@ -125,8 +122,9 @@ export default {
   pointer-events: all;
 }
 .v-btn {
-}
-.v-btn {
   background-color: transparent;
+}
+.v-btn__overlay {
+  display: none;
 }
 </style>

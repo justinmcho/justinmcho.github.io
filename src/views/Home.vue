@@ -21,6 +21,7 @@ import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
 import AboutMe from "../components/AboutMe.vue";
 import AboutMe2 from "../components/AboutMe2.vue";
+import AOS from "aos";
 
 import Footer from "../components/Footer.vue";
 export default {
