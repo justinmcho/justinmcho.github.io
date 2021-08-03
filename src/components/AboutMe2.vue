@@ -11,7 +11,7 @@
       </router-link>
     </div>
     <div class="right">
-      <img class="my-image" :src="require('../assets/justin2.jpeg')" />
+      <img class="my-image" :src="require('../assets/justin-pic2.jpeg')" />
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   flex: 1;
 }
 .left {
-  width: 50%;
+  width: 55%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -59,17 +59,18 @@ export default {
   width: max-content;
 }
 .right {
-  width: 50%;
+  width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   overflow: hidden;
+  background-color: black;
 }
 .my-image {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 25px;
+  position: relative;
+  top: -20%;
 }
 </style>

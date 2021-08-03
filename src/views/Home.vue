@@ -21,6 +21,7 @@ import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
 import AboutMe from "../components/AboutMe.vue";
 import AboutMe2 from "../components/AboutMe2.vue";
+import AOS from "aos";
 
 import Footer from "../components/Footer.vue";
 export default {
@@ -34,9 +35,10 @@ export default {
   },
   mounted() {
     document.getElementById("header-title").style.color = "white";
-    document.getElementById("header-button-aboutme").style.display = null;
+    document.getElementById("header-button-home").style.color = "white";
+    document.getElementById("header-button-aboutme").style.color = "white";
     document.getElementById("header-button-experience").style.color = "white";
-    document.getElementById("header-button-blog").style.color = "white";
+    // document.getElementById("header-button-blog").style.color = "white";
   },
 };
 </script>

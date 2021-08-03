@@ -1,44 +1,44 @@
 <template>
   <div class="header-container">
-    <v-app-bar
-      :absolute="false"
-      flat
-      color="transparent"
-      style="pointer-events: none"
-    >
+    <v-app-bar :absolute="true" flat color="transparent">
       <v-app-bar-title class="nav-title">
         <router-link
           id="header-title"
           :to="{ name: 'Home' }"
-          style="text-decoration: none; color: white"
+          style="text-decoration: none"
           >JUSTIN MIN GI CHO</router-link
         >
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <v-btn
-          rounded="lg"
-          @click="scrollToAboutMe"
-          style="color: white"
-          id="header-button-aboutme"
+        <!-- <router-link
+          id="header-button-home"
+          :to="{ name: 'Home' }"
+          style="text-decoration: none; color: white"
+          >Home</router-link
+        > -->
+        <v-btn rounded="lg" :to="{ name: 'Home' }" id="header-button-home"
+          >Home</v-btn
+        >
+        <v-btn rounded="lg" @click="scrollToAboutMe" id="header-button-aboutme"
           >About Me</v-btn
         >
         <v-btn
           retain-focus-on-click="false"
           rounded="lg"
-          style="color: white"
           :to="{ name: 'Experience' }"
           id="header-button-experience"
           >Experience</v-btn
         >
-        <v-btn
+        <!-- <v-btn
           rounded="lg"
           style="color: white"
           :to="{ name: 'Blog' }"
           id="header-button-blog"
+          @click="blur"
+          disabled
           >Blog</v-btn
-        >
-        <!-- <v-btn rounded="lg" href="/resume.pdf" target="_blank">Resume</v-btn> -->
+        > -->
 
         <!-- <v-btn class="text-white" size="small">KOR</v-btn>
         <v-divider vertical></v-divider>
@@ -56,6 +56,9 @@
       elevation="0"
     >
       <v-list nav dense style="background-color: white">
+        <v-list-item>
+          <v-list-item-title>Home</v-list-item-title>
+        </v-list-item>
         <v-list-item>
           <v-list-item-title>About Me</v-list-item-title>
         </v-list-item>
@@ -82,9 +85,22 @@ export default {
       windowWidth: null,
     };
   },
+  computed: {
+    currentRoute() {
+      return this.$route.name;
+    },
+  },
   methods: {
     checkScreen() {
+      console.log(this.currentRoute);
       this.windowWidth = window.innerWidth;
+      // if (this.currentRoute === "Experience") {
+      //   document.getElementById("header-title").style.color = "black";
+      //   document.getElementById("header-button-home").style.color = "black";
+      //   document.getElementById("header-button-aboutme").style.color = "black";
+      //   document.getElementById("header-button-experience").style.color =
+      //     "black";
+      // }
       if (this.windowWidth <= 815) {
         this.mobile = true;
         return;
@@ -97,9 +113,22 @@ export default {
     toggleDrawerNav() {
       this.drawer = !this.drawer;
     },
-    scrollToAboutMe() {
+    scroll2() {
       var element = document.getElementById("about-me");
       element.scrollIntoView({ behavior: "smooth", block: "center" });
+    },
+    scrollToAboutMe() {
+      var element = document.getElementById("about-me");
+      if (this.currentRoute !== "Home") {
+        this.$router.push(
+          { name: "Home" },
+          setTimeout(() => {
+            this.scroll2(), 1;
+          })
+        );
+      } else {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     },
   },
   mounted() {
@@ -111,6 +140,9 @@ export default {
 
 <style scoped>
 .header-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   background-color: transparent !important;
 }
 .logo-title {
@@ -125,8 +157,12 @@ export default {
   pointer-events: all;
 }
 .v-btn {
-}
-.v-btn {
   background-color: transparent;
+}
+.v-btn-overlay {
+  display: none;
+}
+.why.v-btn:focus::before {
+  opacity: 0 !important;
 }
 </style>
