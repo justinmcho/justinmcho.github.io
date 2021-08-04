@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Experience from "../views/Experience.vue";
 import Blog from "../views/Blog.vue";
@@ -29,8 +29,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  mode: 'hash',
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };
