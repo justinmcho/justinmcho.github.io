@@ -92,15 +92,7 @@ export default {
   },
   methods: {
     checkScreen() {
-      console.log(this.currentRoute);
       this.windowWidth = window.innerWidth;
-      // if (this.currentRoute === "Experience") {
-      //   document.getElementById("header-title").style.color = "black";
-      //   document.getElementById("header-button-home").style.color = "black";
-      //   document.getElementById("header-button-aboutme").style.color = "black";
-      //   document.getElementById("header-button-experience").style.color =
-      //     "black";
-      // }
       if (this.windowWidth <= 815) {
         this.mobile = true;
         return;

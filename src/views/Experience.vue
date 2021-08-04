@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <div class="content-container">
+      <span class="main-description">
+        Justin Min Gi Cho is a student studying Computer Science and Economics
+        at UC Berkeley.
+      </span>
       <span>
         Click
         <a
@@ -12,19 +16,30 @@
         to open up a PDF version of my resume.
       </span>
       <div class="resume-container">
-        <div
+        <a
           v-for="company in resumeBlocks"
           :key="company"
+          :href="company.href"
+          target="_blank"
           class="resume-block"
         >
           <img
             class="resume-image"
             :src="require('../assets/logos/' + company.image)"
-            alt="Alchera"
-            width="100"
-            height="100"
+            :alt="company.companyName"
           />
-        </div>
+          <div class="overlay">
+            <div class="company-name">
+              {{ company.companyName }}
+            </div>
+            <div class="company-description">
+              {{ company.description }}
+            </div>
+            <div class="company-role">
+              {{ company.role }}
+            </div>
+          </div>
+        </a>
       </div>
       <Footer />
     </div>
@@ -41,60 +56,90 @@ export default {
       resumeBlocks: [
         {
           companyName: "Alchera",
-          description: "hi",
+          description:
+            "Alchera is an AI company that specializes in face recognition and image anomaly.",
+          role: "Software Development / Strategy",
           image: "alchera-logo.png",
+          href: "http://alcherainc.com/",
         },
         {
           companyName: "illuner",
-          description: "hi",
+          description:
+            "illuner is a startup that helps college students in Korea order food.",
+          role: "CEO / Software / Strategy",
           image: "illuner-logo.png",
+          href: "",
         },
         {
           companyName: "McCann",
-          description: "hi",
+          description:
+            "McCann is a global advertising firm that provides marketing services for companies.",
+          role: "Account Management / Marketing",
           image: "mccann-logo.png",
+          href: "http://www.mccann.co.kr/",
         },
         {
           companyName: "UpSync Consulting",
-          description: "hi",
+          description:
+            "UpSync Consulting is a premier technology consulting organization at UC Berkeley.",
+          role: "CTO / Management / Consulting",
           image: "upsync-logo.png",
+          href: "https://www.upsyncberkeley.com/",
         },
         {
-          companyName: "Associated Students of the University of California",
-          description: "hi",
+          companyName: "ASUC",
+          description:
+            "The Associated Students of the University of California (ASUC) is the student government of UC Berkeley.",
+          role: "Chief of Staff to the CFO / Funds Management",
           image: "asuc-logo.png",
+          href: "https://asuc.org/",
         },
         {
           companyName: "Association of Korean Artists",
-          description: "hi",
+          description:
+            "Association of Korean Artists is a UC Berkeley hiphop/vocal music group.",
+          role: "President / Management / Singing",
           image: "aka-logo.png",
+          href: "https://callink.berkeley.edu/organization/associationofkoreanartists",
         },
         {
           companyName: "Korean Business Organization",
-          description: "hi",
+          description:
+            "Korean Business Organization is a UC Berkeley organization that serves as a community for students interested in business.",
+          role: "President / Management / Startup",
           image: "kbo-logo.png",
+          href: "https://www.kboberkeley.com/",
         },
         {
           companyName: "AK Interactive",
-          description: "hi",
+          description:
+            "AK Interactive is a game company that maintains the game ‘The Merchant’.",
+          role: "Project Management / Software",
           image: "akinteractive-logo.png",
+          href: "",
         },
         {
-          companyName: "Resume",
-          description: "hi",
+          companyName: "Click to open resume",
+          description: "",
+          role: "",
           image: "resume.png",
+          href: "/resume.pdf",
         },
       ],
     };
   },
   components: { Footer },
   created() {
-    console.log("Created experience");
     document.getElementById("header-title").style.color = "black";
     document.getElementById("header-button-home").style.color = "black";
     document.getElementById("header-button-aboutme").style.color = "black";
     document.getElementById("header-button-experience").style.color = "black";
     // document.getElementById("header-button-blog").style.color = "black";
+  },
+  methods: {
+    navigate() {
+      console.log("HI");
+    },
   },
 };
 </script>
@@ -109,15 +154,20 @@ export default {
   width: 100%;
 }
 .content-container {
-  margin-top: 10vh;
+  margin-top: 7vh;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
 }
+.main-description {
+  font-size: 20px;
+  text-align: start;
+  width: 50%;
+  margin-bottom: 10px;
+}
 .resume-container {
-  margin-top: 10vh;
-  width: 80vw;
+  width: 80%;
   height: 100%;
   display: flex;
   flex: 1;
@@ -125,12 +175,51 @@ export default {
   flex-wrap: wrap;
 }
 .resume-block {
-  width: 26.6667vw;
-  height: 26.6667vw;
+  display: block;
+  width: 33%;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.resume-block:hover .overlay {
+  opacity: 1;
 }
 .resume-image {
   width: 100%;
-  height: 100%;
-  outline: none;
+  height: auto;
+  display: block;
+}
+.company-name {
+  color: white;
+  opacity: 1;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.company-description {
+  color: white;
+  text-align: start;
+  justify-self: center;
+  width: 80%;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+.company-role {
+  color: white;
+  opacity: 1;
+  text-align: center;
 }
 </style>
