@@ -26,7 +26,7 @@
           :to="{ name: 'Experience' }"
           style="text-decoration: none"
         >
-          EXPERIENCE
+          Experience
         </router-link>
         <!-- <v-btn
           rounded="lg"
