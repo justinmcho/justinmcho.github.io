@@ -11,23 +11,24 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <router-link
+        <!-- <router-link
           id="header-button-home"
           :to="{ name: 'Home' }"
-          style="text-decoration: none"
+          style="text-decoration: none; color: white"
+          >Home</router-link
+        > -->
+        <v-btn rounded="lg" :to="{ name: 'Home' }" id="header-button-home"
+          >Home</v-btn
         >
-          HOME
-        </router-link>
         <v-btn rounded="lg" @click="scrollToAboutMe" id="header-button-aboutme"
           >About Me</v-btn
         >
-        <router-link
-          id="header-button-experience"
+        <v-btn
+          rounded="lg"
           :to="{ name: 'Experience' }"
-          style="text-decoration: none"
+          id="header-button-experience"
+          >Experience</v-btn
         >
-          Experience
-        </router-link>
         <!-- <v-btn
           rounded="lg"
           style="color: white"
