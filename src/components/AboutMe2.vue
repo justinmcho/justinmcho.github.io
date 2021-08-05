@@ -2,12 +2,13 @@
   <div class="container">
     <div class="left">
       <div class="title-description">Fun Facts</div>
+      <div class="underline"></div>
       <span class="description"
         >Hobbies: volleyball, singing<br />Location: South Korea<br />MBTI:
         ENTP</span
       >
       <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
-        ><div class="experiences-link">Click here for my experiences</div>
+        ><div class="experiences-link">Click here for my experiences!</div>
       </router-link>
     </div>
     <div class="right">
@@ -31,6 +32,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex: 1;
+  overflow-x: hidden;
 }
 .left {
   width: 55%;
@@ -39,14 +41,16 @@ export default {
   flex-direction: column;
 }
 .title-description {
-  font-size: 40px;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
   padding-top: 10%;
   padding-left: 15%;
+}
+.underline {
   border-bottom: 1px white solid;
-  width: 40%;
+  width: 65%;
 }
 .description {
-  font-size: 25px;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
   padding-top: 15%;
   padding-left: 15%;
 }
@@ -54,7 +58,7 @@ export default {
   margin-top: 20px;
   margin-left: 15%;
   color: #c6c6c6;
-  font-size: 20px;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
   border-bottom: 1px white solid;
   width: max-content;
 }

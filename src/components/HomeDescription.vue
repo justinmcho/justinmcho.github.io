@@ -135,8 +135,8 @@ export default {
 }
 .cursor {
   display: inline-block;
-  margin-left: 5px;
-  width: 4px;
+  margin-left: 0.25vw;
+  width: 0.25vw;
   background-color: white;
   animation: blink 1s infinite;
 }

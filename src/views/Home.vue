@@ -2,8 +2,7 @@
   <div class="container">
     <div class="home-container">
       <div class="container-cover">
-        <HomeDescription id="top" v-if="developerMode"></HomeDescription>
-        <Developer v-else>></Developer>
+        <HomeDescription id="top"></HomeDescription>
       </div>
     </div>
     <div id="about-me" class="about-me-container">

@@ -1,16 +1,14 @@
 <template>
   <div class="container">
     <div class="left">
-      <img class="my-image" :src="require('../assets/Justin_Photo.png')" />
+      <img class="my-image" :src="require('../assets/Justin_Photo.jpeg')" />
       <div style="display: flex; flex-direction: row; align-items: center">
-        <span>Justin Min Gi Cho</span>
-        <div class="social-container">
+        <span class="name">Justin Min Gi Cho</span>
+        <div>
           <a href="https://github.com/justinmcho" target="_blank">
             <img
               :src="require('../assets/github-logo-white.png')"
               alt="Github Logo"
-              width="30"
-              height="30"
               class="social-icon"
             />
           </a>
@@ -18,8 +16,6 @@
             <img
               :src="require('../assets/instagram-logo.png')"
               alt="Github Logo"
-              width="30"
-              height="30"
               class="social-icon"
             />
           </a>
@@ -27,8 +23,6 @@
             <img
               :src="require('../assets/linkedin-logo.png')"
               alt="Github Logo"
-              width="30"
-              height="30"
               class="social-icon"
             />
           </a>
@@ -37,14 +31,12 @@
     </div>
     <div class="right">
       <img
-        class="description-image"
+        class="logo-background-image"
         :src="require('../assets/logo.png')"
         alt="JMC Logo"
-        width="550"
-        height="550"
       />
       <div class="title-description">
-        I'm an <span style="color: #aed9e0">engineer </span>studying <br />
+        I'm an <span style="color: #aed9e0">engineer </span>studying
         <span style="color: #aed9e0">management</span>
       </div>
       <div class="description">
@@ -82,14 +74,19 @@ export default {
   justify-content: center;
 }
 .my-image {
-  width: 280px;
+  width: min(60%, 280px);
   border-radius: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 2vh;
 }
-.social-container {
+.name {
+  font-size: max(10px, 2vw);
 }
 .social-icon {
-  margin: 5px;
+  margin: 1vw;
+  height: 3.5vw;
+  width: 3.5vw;
+  /* height: 30px; */
+  /* width: 30px; */
 }
 .right {
   width: 40%;
@@ -100,17 +97,18 @@ export default {
   justify-content: center;
 }
 .title-description {
-  font-size: 45px;
-  padding-bottom: 40px;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  padding-bottom: 20px;
   z-index: 1;
 }
 .description {
-  font-size: 25px;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
   z-index: 1;
 }
-.description-image {
+.logo-background-image {
   position: absolute;
-  z-index: 0;
   opacity: 0.4;
+  height: 50vw;
+  width: 50vw;
 }
 </style>

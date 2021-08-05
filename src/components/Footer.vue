@@ -19,9 +19,11 @@ export default {
   flex: 1;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 10vw;
+  margin-left: 7.5vw;
   color: black;
-  width: 100vw;
-  height: 15vh;
+  overflow-x: hidden;
+  height: 10vh;
+  /* font-size: 0.75rem; */
+  font-size: clamp(0.75rem, 1vw, 1rem);
 }
 </style>

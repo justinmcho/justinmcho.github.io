@@ -34,8 +34,6 @@
           style="color: white"
           :to="{ name: 'Blog' }"
           id="header-button-blog"
-          @click="blur"
-          disabled
           >Blog</v-btn
         > -->
 
@@ -54,18 +52,37 @@
       color="transparent"
       elevation="0"
     >
-      <v-list nav dense style="background-color: white">
+      <v-list nav dense style="background-color: white; z-index: 5">
         <v-list-item>
-          <v-list-item-title>Home</v-list-item-title>
+          <button @click="toggleDrawerNav" class="nav-link">
+            <router-link
+              :to="{ name: 'Home' }"
+              style="text-decoration: none; color: black"
+              >Home</router-link
+            >
+          </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>About Me</v-list-item-title>
+          <v-list-item-title
+            ><button
+              rounded="lg"
+              @click="scrollToAboutMe"
+              id="header-button-aboutme"
+            >
+              About Me
+            </button></v-list-item-title
+          >
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>Experience</v-list-item-title>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-title>Blog</v-list-item-title>
+          <v-list-item-title>
+            <button @click="toggleDrawerNav">
+              <router-link
+                :to="{ name: 'Experience' }"
+                style="text-decoration: none; color: black"
+                >Experience</router-link
+              >
+            </button>
+          </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -109,6 +126,9 @@ export default {
       element.scrollIntoView({ behavior: "smooth", block: "center" });
     },
     scrollToAboutMe() {
+      if (this.mobile) {
+        this.toggleDrawerNav();
+      }
       var element = document.getElementById("about-me");
       if (this.currentRoute !== "Home") {
         this.$router.push(
@@ -153,7 +173,11 @@ export default {
 .v-btn-overlay {
   display: none;
 }
-.why.v-btn:focus::before {
-  opacity: 0 !important;
+.v-navigation-drawer {
+  z-index: 5 !important;
+}
+.nav-link {
+  display: flex;
+  flex: 1;
 }
 </style>
