@@ -195,7 +195,7 @@ export default {
   padding-right: 8px;
   transition: 0.5s ease;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 17.5px;
 }
 .header-button:hover {
   background-color: rgba(204, 204, 204, 0.2);
@@ -209,5 +209,13 @@ export default {
 .nav-link {
   display: flex;
   flex: 1;
+}
+@media only screen and (min-width: 1050px) {
+  .nav-title {
+    margin-left: 10vw;
+  }
+  .nav-buttons {
+    margin-right: 10vw;
+  }
 }
 </style>
