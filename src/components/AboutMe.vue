@@ -2,7 +2,10 @@
   <div class="container">
     <div class="left">
       <img class="my-image" :src="require('../assets/Justin_Photo.jpeg')" />
-      <div style="display: flex; flex-direction: row; align-items: center">
+      <div
+        style="display: flex; flex-direction: row; align-items: center"
+        class="social-container"
+      >
         <span class="name">Justin Min Gi Cho</span>
         <div>
           <a href="https://github.com/justinmcho" target="_blank">
@@ -110,5 +113,51 @@ export default {
   opacity: 0.4;
   height: clamp(10rem, 50vw, 60rem);
   width: clamp(10rem, 50vw, 60rem);
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    width: 100%;
+  }
+  .my-image {
+    margin-top: 50px;
+    width: max(9.5rem, 70%);
+  }
+  .name {
+    font-size: max(1.25rem, 2vw);
+  }
+  .social-container {
+    margin-bottom: 45px;
+  }
+  .social-icon {
+    margin-left: min(30px, 1.5vw);
+    margin-right: min(30px, 1.5vw);
+    height: clamp(2rem, 4vw, 3rem);
+    width: clamp(2rem, 4vw, 3rem);
+  }
+  .right {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .title-description {
+    /* font-size: max(2.5rem, 7vw); */
+    font-size: min(2.25rem, 8vw);
+    padding-bottom: 8vw;
+    z-index: 1;
+  }
+  .description {
+    font-size: min(1.25rem, 4.75vw);
+  }
+  .logo-background-image {
+    position: absolute;
+    left: 0;
+    opacity: 0.4;
+    height: 100vw;
+    width: 100vw;
+  }
 }
 </style>

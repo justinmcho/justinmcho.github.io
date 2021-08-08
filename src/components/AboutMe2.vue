@@ -5,17 +5,22 @@
       <div class="underline"></div>
       <div class="description">
         <span class="description-title"> Technical Skills: </span>
-        <br style="display: block; content: ''; margin-top: 1px" />
-        Python, Java, C, HTML, CSS, Javascript, React Native, Vue, RISC-V,
-        Swift, R, Stata <br />
+        <br class="inbetween-break" />
+        <span class="description-details">
+          Python, Java, C, HTML, CSS, Javascript, React Native, Vue.js, RISC-V,
+          Swift, R, Stata <br />
+        </span>
         <span class="description-title">Background: </span>
-        <br style="display: block; content: ''; margin-top: 1px" />
-        Consulting, Front end web development, App development
-        <br />
-        <span class="description-title"> Currently studying/working on: </span>
-
-        <br style="display: block; content: ''; margin-top: 1px" />
-        Back end development <br />
+        <br class="inbetween-break" />
+        <span class="description-details">
+          Consulting, Front end web development, App development
+          <br />
+        </span>
+        <span class="description-title">
+          Currently studying / working on:
+        </span>
+        <br class="inbetween-break" />
+        <span class="description-details"> Back end development <br /> </span>
       </div>
       <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
         ><div class="experiences-link">Click here for my experiences!</div>
@@ -46,6 +51,11 @@ br {
   content: "";
   margin-top: 0.75vw;
 }
+.inbetween-break {
+  display: block;
+  content: "";
+  margin-top: 1vw;
+}
 .left {
   width: 55%;
   height: 100%;
@@ -70,6 +80,10 @@ br {
   color: #aed9e0;
   font-weight: 500;
 }
+.description-details {
+  color: white;
+  font-size: max(0.65rem, 1.85vw);
+}
 .experiences-link {
   margin-top: 20px;
   margin-left: 15%;
@@ -92,5 +106,36 @@ br {
   width: 100%;
   position: relative;
   top: -20%;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    margin-bottom: 50px;
+  }
+  br {
+    margin-top: 30px;
+  }
+  .inbetween-break {
+    margin-top: 0px;
+  }
+  .left {
+    width: 90%;
+  }
+  .description {
+    font-size: min(2.15rem, 8vw);
+    padding-left: 5%;
+  }
+  .description-details {
+    font-size: min(1.2rem, 5vw);
+  }
+  .experiences-link {
+    margin-top: 10px;
+    font-size: min(1.1rem, 4.5vw);
+  }
+  .right {
+    display: none;
+  }
+  .my-image {
+    display: none;
+  }
 }
 </style>

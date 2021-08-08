@@ -20,7 +20,6 @@ import HomeDescription from "../components/HomeDescription.vue";
 import Developer from "../components/Develop.vue";
 import AboutMe from "../components/AboutMe.vue";
 import AboutMe2 from "../components/AboutMe2.vue";
-import AOS from "aos";
 
 import Footer from "../components/Footer.vue";
 export default {
@@ -89,5 +88,14 @@ export default {
   width: 100%;
   overflow: hidden;
   color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .about-me-container {
+    height: fit-content;
+  }
+  .about-me-2-container {
+    height: fit-content;
+  }
 }
 </style>

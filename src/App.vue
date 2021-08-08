@@ -16,9 +16,6 @@ export default {
   components: {
     Header,
   },
-  data: () => ({
-    //
-  }),
   created() {
     AOS.init();
   },

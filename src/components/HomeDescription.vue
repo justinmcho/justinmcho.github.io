@@ -141,6 +141,11 @@ export default {
   animation: blink 1s infinite;
 }
 
+.description {
+  color: #87c7ed;
+  font-size: min(4vh, 2vw);
+}
+
 @keyframes blink {
   49.9% {
     background-color: white;
@@ -152,8 +157,19 @@ export default {
     background: transparent;
   }
 }
-.description {
-  color: #87c7ed;
-  font-size: min(4vh, 2vw);
+
+@media only screen and (max-width: 700px) {
+  .container-home-description {
+    width: 100vw;
+    margin-left: 10%;
+  }
+  .title {
+    font-size: 8vw;
+    line-height: 8vw;
+    height: 8vw;
+  }
+  .description {
+    font-size: 4vw;
+  }
 }
 </style>

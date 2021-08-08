@@ -157,8 +157,6 @@ export default {
   flex: 1;
   flex-direction: column;
   background-color: white;
-  height: 100%;
-  width: 100%;
 }
 .content-container {
   margin-top: 7vh;
@@ -170,7 +168,7 @@ export default {
 .main-description {
   font-size: 20px;
   text-align: start;
-  width: 50%;
+  width: 35%;
   margin-bottom: 10px;
 }
 .resume-container {
@@ -222,13 +220,54 @@ export default {
   justify-self: center;
   width: 85%;
   opacity: 1;
-  font-size: max(0.65rem, 1.4vw);
+  font-size: max(0.65rem, 1vw);
   padding-bottom: 1vw;
 }
 .company-role {
   color: white;
   opacity: 1;
-  font-size: max(0.65rem, 1.4vw);
+  font-size: max(0.65rem, 1vw);
   text-align: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .main-description {
+    width: 70%;
+  }
+  .resume-container {
+    width: 90%;
+  }
+  .resume-block {
+    width: 50%;
+  }
+  .company-name {
+    font-size: max(1rem, 1.875vw);
+  }
+  .company-description {
+    font-size: max(0.65rem, 1vw);
+  }
+  .company-role {
+    font-size: max(0.65rem, 1vw);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main-description {
+    width: 75%;
+  }
+  .resume-container {
+    width: 80%;
+  }
+  .resume-block {
+    width: 100%;
+  }
+  .company-name {
+    font-size: max(1rem, 1.875vw);
+  }
+  .company-description {
+    font-size: max(0.65rem, 1vw);
+  }
+  .company-role {
+    font-size: max(0.65rem, 1vw);
+  }
 }
 </style>
