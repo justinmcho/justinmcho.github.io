@@ -257,7 +257,7 @@ export default {
 @media only screen and (max-width: 700px) {
   .main-description {
     font-size: 15px;
-    width: 75%;
+    width: 85%;
   }
   .resume-container {
     width: 80%;
