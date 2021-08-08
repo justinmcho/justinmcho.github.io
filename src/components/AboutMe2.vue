@@ -1,12 +1,22 @@
 <template>
   <div class="container">
     <div class="left">
-      <div class="title-description">Fun Facts</div>
+      <div class="title-description"></div>
       <div class="underline"></div>
-      <span class="description"
-        >Hobbies: volleyball, singing<br />Location: South Korea<br />MBTI:
-        ENTP</span
-      >
+      <div class="description">
+        <span class="description-title"> Technical Skills: </span>
+        <br style="display: block; content: ''; margin-top: 1px" />
+        Python, Java, C, HTML, CSS, Javascript, React Native, Vue, RISC-V,
+        Swift, R, Stata <br />
+        <span class="description-title">Background: </span>
+        <br style="display: block; content: ''; margin-top: 1px" />
+        Consulting, Front end web development, App development
+        <br />
+        <span class="description-title"> Currently studying/working on: </span>
+
+        <br style="display: block; content: ''; margin-top: 1px" />
+        Back end development <br />
+      </div>
       <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
         ><div class="experiences-link">Click here for my experiences!</div>
       </router-link>
@@ -31,6 +41,11 @@ export default {
   flex-direction: row;
   flex: 1;
 }
+br {
+  display: block;
+  content: "";
+  margin-top: 0.75vw;
+}
 .left {
   width: 55%;
   height: 100%;
@@ -39,7 +54,7 @@ export default {
 }
 .title-description {
   font-size: clamp(1.5rem, 4vw, 2.75rem);
-  padding-top: 10%;
+  padding-top: 12.5%;
   padding-left: 15%;
 }
 .underline {
@@ -47,15 +62,19 @@ export default {
   width: 65%;
 }
 .description {
-  font-size: clamp(0.75rem, 2vw, 1.5rem);
-  padding-top: 15%;
+  font-size: max(0.75rem, 2.1vw);
+  padding-top: 10%;
   padding-left: 15%;
+}
+.description-title {
+  color: #aed9e0;
+  font-weight: 500;
 }
 .experiences-link {
   margin-top: 20px;
   margin-left: 15%;
   color: #c6c6c6;
-  font-size: clamp(0.75rem, 2vw, 1.5rem);
+  font-size: max(0.75rem, 1.75vw);
   border-bottom: 1px white solid;
   width: max-content;
 }

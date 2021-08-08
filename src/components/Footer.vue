@@ -23,7 +23,6 @@ export default {
   color: black;
   overflow-x: hidden;
   height: 10vh;
-  /* font-size: 0.75rem; */
   font-size: clamp(0.75rem, 1vw, 1rem);
 }
 </style>

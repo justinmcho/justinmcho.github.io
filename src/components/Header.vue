@@ -42,7 +42,7 @@
         <v-btn class="text-white" size="small">ENG</v-btn> -->
       </div>
       <v-btn icon @click="toggleDrawerNav" v-show="mobile"
-        ><v-icon color="white">mdi-menu</v-icon></v-btn
+        ><v-icon id="drawerNav" color="black">mdi-menu</v-icon></v-btn
       >
     </v-app-bar>
     <v-navigation-drawer

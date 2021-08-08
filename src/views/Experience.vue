@@ -5,7 +5,7 @@
         Justin Min Gi Cho is a student studying Computer Science and Economics
         at UC Berkeley.
       </span>
-      <span>
+      <!-- <span>
         Click
         <a
           style="text-decoration: none; color: #aed9e0; font-weight: bold"
@@ -14,7 +14,7 @@
           >here</a
         >
         to open up a PDF version of my resume.
-      </span>
+      </span> -->
       <div class="resume-container">
         <a
           v-for="company in resumeBlocks"
@@ -41,6 +41,8 @@
           </div>
         </a>
       </div>
+    </div>
+    <div>
       <Footer />
     </div>
   </div>
@@ -55,6 +57,13 @@ export default {
     return {
       resumeBlocks: [
         {
+          companyName: "Click to open resume",
+          description: "",
+          role: "",
+          image: "resume.png",
+          href: "/resume.pdf",
+        },
+        {
           companyName: "Alchera",
           description:
             "Alchera is an AI company that specializes in face recognition and image anomaly.",
@@ -68,7 +77,7 @@ export default {
             "illuner is a startup that helps college students in Korea order food.",
           role: "CEO / Software / Strategy",
           image: "illuner-logo.png",
-          href: "",
+          href: "https://www.linkedin.com/company/illuner",
         },
         {
           companyName: "McCann",
@@ -105,8 +114,8 @@ export default {
         {
           companyName: "Korean Business Organization",
           description:
-            "Korean Business Organization is a UC Berkeley organization that serves as a community for students interested in business.",
-          role: "President / Management / Startup",
+            "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
+          role: "President / Management / Entrepreneurship",
           image: "kbo-logo.png",
           href: "https://www.kboberkeley.com/",
         },
@@ -116,24 +125,21 @@ export default {
             "AK Interactive is a game company that maintains the game ‘The Merchant’.",
           role: "Project Management / Software",
           image: "akinteractive-logo.png",
-          href: "",
-        },
-        {
-          companyName: "Click to open resume",
-          description: "",
-          role: "",
-          image: "resume.png",
-          href: "/resume.pdf",
+          href: "http://www.akinteractive.co.kr/kor/main.gs",
         },
       ],
     };
   },
   components: { Footer },
-  created() {
+  mounted() {
     document.getElementById("header-title").style.color = "black";
     document.getElementById("header-button-home").style.color = "black";
     document.getElementById("header-button-aboutme").style.color = "black";
-    document.getElementById("header-button-experience").style.color = "black";
+    document.getElementById("header-button-experience").style.color = "#AED9E0";
+    var drawerNav = document.getElementById("drawerNav");
+    drawerNav.classList.remove("text-white");
+    drawerNav.classList.add("text-black");
+
     // document.getElementById("header-button-blog").style.color = "black";
   },
   methods: {
@@ -150,6 +156,7 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: white;
   height: 100%;
   width: 100%;
 }
@@ -206,20 +213,22 @@ export default {
   color: white;
   opacity: 1;
   text-align: center;
-  font-size: 30px;
-  padding-bottom: 20px;
+  font-size: max(1rem, 1.875vw);
+  padding-bottom: 1vw;
 }
 .company-description {
   color: white;
   text-align: start;
   justify-self: center;
-  width: 80%;
+  width: 85%;
   opacity: 1;
-  padding-bottom: 20px;
+  font-size: max(0.65rem, 1.4vw);
+  padding-bottom: 1vw;
 }
 .company-role {
   color: white;
   opacity: 1;
+  font-size: max(0.65rem, 1.4vw);
   text-align: center;
 }
 </style>

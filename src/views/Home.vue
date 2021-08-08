@@ -34,9 +34,14 @@ export default {
   },
   mounted() {
     document.getElementById("header-title").style.color = "white";
-    document.getElementById("header-button-home").style.color = "white";
+    document.getElementById("header-button-home").style.color = "#AED9E0";
     document.getElementById("header-button-aboutme").style.color = "white";
     document.getElementById("header-button-experience").style.color = "white";
+    var drawerNavElement = document.querySelector("#drawerNav");
+    if (drawerNavElement.classList.contains("text-black")) {
+      drawerNav.classList.remove("text-black");
+      drawerNav.classList.add("text-white");
+    }
     // document.getElementById("header-button-blog").style.color = "white";
   },
 };
@@ -77,10 +82,9 @@ export default {
   color: white;
 }
 .about-me-2-container {
-  background-color: #ad9a83;
+  background-color: #25232c;
   display: flex;
   flex: 1;
-  /* align-items: center; */
   height: 55vw;
   width: 100%;
   overflow: hidden;
