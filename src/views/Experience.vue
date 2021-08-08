@@ -167,7 +167,7 @@ export default {
   margin-bottom: 10px;
 }
 .resume-container {
-  width: 80%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex: 1;

@@ -44,8 +44,8 @@ export default {
 
 <style scoped>
 .container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 .home-container {
   display: flex;
@@ -53,8 +53,8 @@ export default {
   background-image: url("../assets/seoul.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 .container-cover {
   display: flex;
@@ -70,14 +70,20 @@ export default {
 }
 .about-me-container {
   background-color: black;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  height: 55vw;
   width: 100%;
   color: white;
 }
 .about-me-2-container {
   background-color: #ad9a83;
-  height: 100%;
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+  height: 55vw;
   width: 100%;
+  overflow: hidden;
   color: white;
 }
 </style>

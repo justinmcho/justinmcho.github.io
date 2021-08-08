@@ -27,12 +27,9 @@ export default {
 
 <style scoped>
 .container {
-  color: white;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex: 1;
-  overflow-x: hidden;
 }
 .left {
   width: 55%;

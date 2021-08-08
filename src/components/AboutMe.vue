@@ -40,7 +40,7 @@
         <span style="color: #aed9e0">management</span>
       </div>
       <div class="description">
-        I’ve always had a fascination for building new ideas. I am currently
+        I’ve always had a fascination for building new ideas. I am a junior
         studying computer science and economics at UC Berkeley. Right now, I am
         taking a gap year(s) in Korea to take on internships from various
         industries and to serve in the Korean military.
@@ -60,7 +60,6 @@ export default {
 <style scoped>
 .container {
   color: white;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -74,19 +73,19 @@ export default {
   justify-content: center;
 }
 .my-image {
-  width: min(60%, 280px);
+  width: max(9.5rem, 50%);
+  /* width: 32.5rem max */
   border-radius: 10px;
   margin-bottom: 2vh;
 }
 .name {
-  font-size: max(10px, 2vw);
+  font-size: max(0.75rem, 1.75vw);
+  /* width: 1.75rem max */
 }
 .social-icon {
-  margin: 1vw;
-  height: 3.5vw;
-  width: 3.5vw;
-  /* height: 30px; */
-  /* width: 30px; */
+  margin: min(5px, 0.5vw);
+  height: clamp(0.75rem, 3vw, 3rem);
+  width: clamp(0.75rem, 3vw, 3rem);
 }
 .right {
   width: 40%;
@@ -97,18 +96,19 @@ export default {
   justify-content: center;
 }
 .title-description {
-  font-size: clamp(1.5rem, 4vw, 2.75rem);
-  padding-bottom: 20px;
+  font-size: max(1.5rem, 3.5vw);
+  padding-bottom: 5vw;
   z-index: 1;
 }
 .description {
-  font-size: clamp(0.75rem, 2vw, 1.5rem);
+  font-size: max(0.75rem, 2.1vw);
   z-index: 1;
 }
 .logo-background-image {
   position: absolute;
+  left: 45vw;
   opacity: 0.4;
-  height: 50vw;
-  width: 50vw;
+  height: clamp(10rem, 50vw, 60rem);
+  width: clamp(10rem, 50vw, 60rem);
 }
 </style>
