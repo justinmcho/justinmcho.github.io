@@ -13,7 +13,7 @@
         <span class="description-title">Background: </span>
         <br class="inbetween-break" />
         <span class="description-details">
-          Consulting, Front end web development, App development
+          Consulting, Front end web development, App development, Management
           <br />
         </span>
         <span class="description-title">
@@ -49,7 +49,7 @@ export default {
 br {
   display: block;
   content: "";
-  margin-top: 0.75vw;
+  margin-top: 2vw;
 }
 .inbetween-break {
   display: block;

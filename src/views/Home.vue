@@ -3,6 +3,9 @@
     <div class="home-container">
       <div class="container-cover">
         <HomeDescription id="top"></HomeDescription>
+        <v-icon class="scroll-down-icon" x-large color="white">
+          mdi-chevron-down
+        </v-icon>
       </div>
     </div>
     <div id="about-me" class="about-me-container">
@@ -33,7 +36,7 @@ export default {
   },
   mounted() {
     document.getElementById("header-title").style.color = "white";
-    document.getElementById("header-button-home").style.color = "#AED9E0";
+    document.getElementById("header-button-home").style.color = "#87c7ed";
     document.getElementById("header-button-aboutme").style.color = "white";
     document.getElementById("header-button-experience").style.color = "white";
     var drawerNavElement = document.querySelector("#drawerNav");
@@ -59,6 +62,13 @@ export default {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+}
+.scroll-down-icon {
+  color: white;
+  position: absolute;
+  top: 95vh;
+  font-size: 75px;
+  animation: UpDown 2.85s infinite;
 }
 .container-cover {
   display: flex;
@@ -89,8 +99,20 @@ export default {
   overflow: hidden;
   color: white;
 }
+@keyframes UpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
 
 @media only screen and (max-width: 700px) {
+  .scroll-down-icon {
+    font-size: 50px;
+  }
   .about-me-container {
     height: fit-content;
   }

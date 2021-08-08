@@ -11,23 +11,26 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <!-- <router-link
+        <router-link
+          class="header-button"
           id="header-button-home"
           :to="{ name: 'Home' }"
-          style="text-decoration: none; color: white"
+          style="text-decoration: none"
           >Home</router-link
-        > -->
-        <v-btn rounded="lg" :to="{ name: 'Home' }" id="header-button-home"
-          >Home</v-btn
         >
-        <v-btn rounded="lg" @click="scrollToAboutMe" id="header-button-aboutme"
-          >About Me</v-btn
+        <button
+          @click="scrollToAboutMe"
+          class="header-button"
+          id="header-button-aboutme"
         >
-        <v-btn
-          rounded="lg"
-          :to="{ name: 'Experience' }"
+          About Me
+        </button>
+        <router-link
+          class="header-button"
           id="header-button-experience"
-          >Experience</v-btn
+          :to="{ name: 'Experience' }"
+          style="text-decoration: none"
+          >Experiences</router-link
         >
         <!-- <v-btn
           rounded="lg"
@@ -57,32 +60,52 @@
           <button @click="toggleDrawerNav" class="nav-link">
             <router-link
               :to="{ name: 'Home' }"
-              style="text-decoration: none; color: black"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
               >Home</router-link
             >
           </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title
-            ><button
-              rounded="lg"
-              @click="scrollToAboutMe"
-              id="header-button-aboutme"
-            >
-              About Me
-            </button></v-list-item-title
+          <button
+            rounded="lg"
+            @click="scrollToAboutMe"
+            id="header-button-aboutme"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
           >
+            About Me
+          </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>
-            <button @click="toggleDrawerNav">
-              <router-link
-                :to="{ name: 'Experience' }"
-                style="text-decoration: none; color: black"
-                >Experience</router-link
-              >
-            </button>
-          </v-list-item-title>
+          <button
+            @click="toggleDrawerNav"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
+          >
+            <router-link
+              :to="{ name: 'Experience' }"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+              >Experiences</router-link
+            >
+          </button>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -153,7 +176,7 @@ export default {
 .header-container {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   background-color: transparent !important;
 }
 .logo-title {
@@ -161,20 +184,27 @@ export default {
 }
 .nav-title {
   color: white !important;
-  pointer-events: all;
 }
-.nav-buttons {
-  margin-right: 5vw;
-  pointer-events: all;
+.header-button {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: 0.5s ease;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.header-button:hover {
+  background-color: rgba(204, 204, 204, 0.2);
 }
 .v-btn {
   background-color: transparent;
 }
-.v-btn-overlay {
-  display: none;
-}
-.v-navigation-drawer {
-  z-index: 5 !important;
+.nav-buttons {
+  margin-right: 5vw;
 }
 .nav-link {
   display: flex;

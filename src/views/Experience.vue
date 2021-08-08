@@ -2,8 +2,10 @@
   <div class="container">
     <div class="content-container">
       <span class="main-description">
-        Justin Min Gi Cho is a student studying Computer Science and Economics
-        at UC Berkeley.
+        Justin Min Gi Cho develops ideas for a purpose and shares them with his
+        community. He has previously served as President of Korean Business
+        Organization (co-founded) and Association of Korean Artists, CTO of
+        UpSync Consulting, and Chief of Staff of the ASUC CFO Office.
       </span>
       <!-- <span>
         Click
@@ -80,12 +82,12 @@ export default {
           href: "https://www.linkedin.com/company/illuner",
         },
         {
-          companyName: "McCann",
+          companyName: "Korean Business Organization",
           description:
-            "McCann is a global advertising firm that provides marketing services for companies.",
-          role: "Account Management / Marketing",
-          image: "mccann-logo.png",
-          href: "http://www.mccann.co.kr/",
+            "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
+          role: "President / Management / Entrepreneurship",
+          image: "kbo-logo.png",
+          href: "https://www.kboberkeley.com/",
         },
         {
           companyName: "UpSync Consulting",
@@ -112,12 +114,12 @@ export default {
           href: "https://callink.berkeley.edu/organization/associationofkoreanartists",
         },
         {
-          companyName: "Korean Business Organization",
+          companyName: "McCann",
           description:
-            "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
-          role: "President / Management / Entrepreneurship",
-          image: "kbo-logo.png",
-          href: "https://www.kboberkeley.com/",
+            "McCann is a global advertising firm that provides marketing services for companies.",
+          role: "Account Management / Marketing",
+          image: "mccann-logo.png",
+          href: "http://www.mccann.co.kr/",
         },
         {
           companyName: "AK Interactive",
@@ -135,7 +137,7 @@ export default {
     document.getElementById("header-title").style.color = "black";
     document.getElementById("header-button-home").style.color = "black";
     document.getElementById("header-button-aboutme").style.color = "black";
-    document.getElementById("header-button-experience").style.color = "#AED9E0";
+    document.getElementById("header-button-experience").style.color = "#87c7ed";
     var drawerNav = document.getElementById("drawerNav");
     drawerNav.classList.remove("text-white");
     drawerNav.classList.add("text-black");
@@ -166,10 +168,12 @@ export default {
   align-items: center;
 }
 .main-description {
-  font-size: 20px;
+  font-size: min(2vw, 20px);
+  font-weight: 500;
   text-align: start;
-  width: 35%;
-  margin-bottom: 10px;
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .resume-container {
   width: 60%;
@@ -252,6 +256,7 @@ export default {
 }
 @media only screen and (max-width: 700px) {
   .main-description {
+    font-size: 15px;
     width: 75%;
   }
   .resume-container {
