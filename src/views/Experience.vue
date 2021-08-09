@@ -5,7 +5,8 @@
         Justin Min Gi Cho develops ideas for a purpose and shares them with his
         community. He has previously served as President of Korean Business
         Organization (co-founded) and Association of Korean Artists, CTO of
-        UpSync Consulting, and Chief of Staff of the ASUC CFO Office.
+        UpSync Consulting, and Chief of Staff of the ASUC CFO Office. Please
+        email justinmcho.k@gmail.com more information (such as resume).
       </span>
       <!-- <span>
         Click
@@ -58,13 +59,6 @@ export default {
   data() {
     return {
       resumeBlocks: [
-        {
-          companyName: "Click to open resume",
-          description: "",
-          role: "",
-          image: "resume.png",
-          href: "/resume.pdf",
-        },
         {
           companyName: "Alchera",
           description:
@@ -129,6 +123,14 @@ export default {
           image: "akinteractive-logo.png",
           href: "http://www.akinteractive.co.kr/kor/main.gs",
         },
+        {
+          companyName: "justinmcho.com",
+          description:
+            "I used HTML, CSS, Javascript, Vue 3, Adobe XD, and Github Pages to create this website.",
+          role: "Design / Software",
+          image: "jmc-logo.png",
+          href: "https://blog.naver.com/justinmcho99/222463829656",
+        },
       ],
     };
   },
@@ -138,11 +140,10 @@ export default {
     document.getElementById("header-button-home").style.color = "black";
     document.getElementById("header-button-aboutme").style.color = "black";
     document.getElementById("header-button-experience").style.color = "#87c7ed";
+    document.getElementById("header-button-blog").style.color = "black";
     var drawerNav = document.getElementById("drawerNav");
     drawerNav.classList.remove("text-white");
     drawerNav.classList.add("text-black");
-
-    // document.getElementById("header-button-blog").style.color = "black";
   },
   methods: {
     navigate() {

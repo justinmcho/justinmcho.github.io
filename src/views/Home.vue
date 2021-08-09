@@ -39,12 +39,12 @@ export default {
     document.getElementById("header-button-home").style.color = "#87c7ed";
     document.getElementById("header-button-aboutme").style.color = "white";
     document.getElementById("header-button-experience").style.color = "white";
+    document.getElementById("header-button-blog").style.color = "white";
     var drawerNavElement = document.querySelector("#drawerNav");
     if (drawerNavElement.classList.contains("text-black")) {
       drawerNav.classList.remove("text-black");
       drawerNav.classList.add("text-white");
     }
-    // document.getElementById("header-button-blog").style.color = "white";
   },
 };
 </script>

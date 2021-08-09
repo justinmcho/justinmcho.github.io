@@ -32,13 +32,13 @@
           style="text-decoration: none"
           >Experiences</router-link
         >
-        <!-- <v-btn
-          rounded="lg"
-          style="color: white"
-          :to="{ name: 'Blog' }"
+        <a
+          class="header-button"
           id="header-button-blog"
-          >Blog</v-btn
-        > -->
+          href="https://blog.naver.com/justinmcho99"
+          style="text-decoration: none"
+          >Blog</a
+        >
 
         <!-- <v-btn class="text-white" size="small">KOR</v-btn>
         <v-divider vertical></v-divider>
@@ -104,6 +104,28 @@
                 width: 100%;
               "
               >Experiences</router-link
+            >
+          </button>
+        </v-list-item>
+        <v-list-item>
+          <button
+            @click="toggleDrawerNav"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
+          >
+            <a
+              href="https://blog.naver.com/justinmcho99"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+              >Blog</a
             >
           </button>
         </v-list-item>
