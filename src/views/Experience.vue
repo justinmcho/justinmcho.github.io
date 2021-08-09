@@ -201,7 +201,7 @@ export default {
   transition: 0.5s ease;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .resume-block:hover .overlay {
   opacity: 1;
@@ -245,13 +245,15 @@ export default {
     width: 50%;
   }
   .company-name {
-    font-size: max(1rem, 1.875vw);
+    font-size: max(2rem, 3.75vw);
+    padding-bottom: 4vw;
   }
   .company-description {
-    font-size: max(0.65rem, 1vw);
+    font-size: max(1.15rem, 2.25vw);
+    padding-bottom: 4vw;
   }
   .company-role {
-    font-size: max(0.65rem, 1vw);
+    font-size: max(1.15rem, 2.25vw);
   }
 }
 @media only screen and (max-width: 700px) {
@@ -266,13 +268,15 @@ export default {
     width: 100%;
   }
   .company-name {
-    font-size: max(1rem, 1.875vw);
+    font-size: max(2rem, 3.75vw);
+    padding-bottom: 7.5vw;
   }
   .company-description {
-    font-size: max(0.65rem, 1vw);
+    font-size: max(1.15rem, 2.25vw);
+    padding-bottom: 7.5vw;
   }
   .company-role {
-    font-size: max(0.65rem, 1vw);
+    font-size: max(1.15rem, 2.25vw);
   }
 }
 </style>
