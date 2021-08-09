@@ -71,7 +71,7 @@ export default {
             "Alchera is an AI company that specializes in face recognition and image anomaly.",
           role: "Software Development / Strategy",
           image: "alchera-logo.png",
-          href: "http://alcherainc.com/",
+          href: "https://alcherainc.com/",
         },
         {
           companyName: "illuner",
