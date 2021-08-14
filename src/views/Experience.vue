@@ -5,16 +5,7 @@
         Justin Min Gi Cho is a student studying Computer Science and Economics
         at UC Berkeley.
       </span>
-      <span>
-        Click
-        <a
-          style="text-decoration: none; color: #aed9e0; font-weight: bold"
-          href="/resume.pdf"
-          target="_blank"
-          >here</a
-        >
-        to open up a PDF version of my resume.
-      </span>
+
       <div class="resume-container">
         <a
           v-for="company in resumeBlocks"
@@ -55,12 +46,19 @@ export default {
     return {
       resumeBlocks: [
         {
+          companyName: "Click to open resume",
+          description: "",
+          role: "",
+          image: "resume.png",
+          href: "/resume.pdf",
+        },
+        {
           companyName: "Alchera",
           description:
             "Alchera is an AI company that specializes in face recognition and image anomaly.",
           role: "Software Development / Strategy",
           image: "alchera-logo.png",
-          href: "http://alcherainc.com/",
+          href: "https://alcherainc.com/",
         },
         {
           companyName: "illuner",
@@ -118,13 +116,6 @@ export default {
           image: "akinteractive-logo.png",
           href: "",
         },
-        {
-          companyName: "Click to open resume",
-          description: "",
-          role: "",
-          image: "resume.png",
-          href: "/resume.pdf",
-        },
       ],
     };
   },
@@ -154,7 +145,7 @@ export default {
   width: 100%;
 }
 .content-container {
-  margin-top: 7vh;
+  margin-top: 10vh;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -162,12 +153,13 @@ export default {
 }
 .main-description {
   font-size: 20px;
+  padding-bottom: 10vh;
   text-align: start;
   width: 50%;
   margin-bottom: 10px;
 }
 .resume-container {
-  width: 80%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex: 1;
