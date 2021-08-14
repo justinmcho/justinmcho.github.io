@@ -2,10 +2,26 @@
   <div class="container">
     <div class="content-container">
       <span class="main-description">
-        Justin Min Gi Cho is a student studying Computer Science and Economics
-        at UC Berkeley.
+        Justin Min Gi Cho develops ideas for a purpose and shares them with his
+        community. He has previously served as President of Korean Business
+        Organization (co-founded) and Association of Korean Artists, CTO of
+        UpSync Consulting, and Chief of Staff of the ASUC CFO Office. Please
+        email justinmcho.k@gmail.com for more information (such as resume).
       </span>
+<<<<<<< HEAD
 
+=======
+      <!-- <span>
+        Click
+        <a
+          style="text-decoration: none; color: #aed9e0; font-weight: bold"
+          href="/resume.pdf"
+          target="_blank"
+          >here</a
+        >
+        to open up a PDF version of my resume.
+      </span> -->
+>>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
       <div class="resume-container">
         <a
           v-for="company in resumeBlocks"
@@ -32,6 +48,8 @@
           </div>
         </a>
       </div>
+    </div>
+    <div>
       <Footer />
     </div>
   </div>
@@ -66,15 +84,15 @@ export default {
             "illuner is a startup that helps college students in Korea order food.",
           role: "CEO / Software / Strategy",
           image: "illuner-logo.png",
-          href: "",
+          href: "https://www.linkedin.com/company/illuner",
         },
         {
-          companyName: "McCann",
+          companyName: "Korean Business Organization",
           description:
-            "McCann is a global advertising firm that provides marketing services for companies.",
-          role: "Account Management / Marketing",
-          image: "mccann-logo.png",
-          href: "http://www.mccann.co.kr/",
+            "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
+          role: "President / Management / Entrepreneurship",
+          image: "kbo-logo.png",
+          href: "https://www.kboberkeley.com/",
         },
         {
           companyName: "UpSync Consulting",
@@ -101,12 +119,12 @@ export default {
           href: "https://callink.berkeley.edu/organization/associationofkoreanartists",
         },
         {
-          companyName: "Korean Business Organization",
+          companyName: "McCann",
           description:
-            "Korean Business Organization is a UC Berkeley organization that serves as a community for students interested in business.",
-          role: "President / Management / Startup",
-          image: "kbo-logo.png",
-          href: "https://www.kboberkeley.com/",
+            "McCann is a global advertising firm that provides marketing services for companies.",
+          role: "Account Management / Marketing",
+          image: "mccann-logo.png",
+          href: "http://www.mccann.co.kr/",
         },
         {
           companyName: "AK Interactive",
@@ -114,18 +132,32 @@ export default {
             "AK Interactive is a game company that maintains the game ‘The Merchant’.",
           role: "Project Management / Software",
           image: "akinteractive-logo.png",
-          href: "",
+          href: "http://www.akinteractive.co.kr/kor/main.gs",
         },
+<<<<<<< HEAD
+=======
+        {
+          companyName: "justinmcho.com",
+          description:
+            "I used HTML, CSS, Javascript, Vue 3, Adobe XD, and Github Pages to create this website.",
+          role: "Design / Software",
+          image: "jmc-logo.png",
+          href: "https://blog.naver.com/justinmcho99/222463829656",
+        },
+>>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
       ],
     };
   },
   components: { Footer },
-  created() {
+  mounted() {
     document.getElementById("header-title").style.color = "black";
     document.getElementById("header-button-home").style.color = "black";
     document.getElementById("header-button-aboutme").style.color = "black";
-    document.getElementById("header-button-experience").style.color = "black";
-    // document.getElementById("header-button-blog").style.color = "black";
+    document.getElementById("header-button-experience").style.color = "#87c7ed";
+    document.getElementById("header-button-blog").style.color = "black";
+    var drawerNav = document.getElementById("drawerNav");
+    drawerNav.classList.remove("text-white");
+    drawerNav.classList.add("text-black");
   },
   methods: {
     navigate() {
@@ -141,8 +173,7 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  background-color: white;
 }
 .content-container {
   margin-top: 10vh;
@@ -152,11 +183,17 @@ export default {
   align-items: center;
 }
 .main-description {
+<<<<<<< HEAD
   font-size: 20px;
   padding-bottom: 10vh;
+=======
+  font-size: min(2vw, 20px);
+  font-weight: 500;
+>>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
   text-align: start;
-  width: 50%;
-  margin-bottom: 10px;
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .resume-container {
   width: 60%;
@@ -184,7 +221,7 @@ export default {
   transition: 0.5s ease;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .resume-block:hover .overlay {
   opacity: 1;
@@ -198,20 +235,68 @@ export default {
   color: white;
   opacity: 1;
   text-align: center;
-  font-size: 30px;
-  padding-bottom: 20px;
+  font-size: max(1rem, 1.875vw);
+  padding-bottom: 1vw;
 }
 .company-description {
   color: white;
   text-align: start;
   justify-self: center;
-  width: 80%;
+  width: 85%;
   opacity: 1;
-  padding-bottom: 20px;
+  font-size: max(0.65rem, 1vw);
+  padding-bottom: 1vw;
 }
 .company-role {
   color: white;
   opacity: 1;
+  font-size: max(0.65rem, 1vw);
   text-align: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .main-description {
+    width: 70%;
+  }
+  .resume-container {
+    width: 90%;
+  }
+  .resume-block {
+    width: 50%;
+  }
+  .company-name {
+    font-size: max(2rem, 3.75vw);
+    padding-bottom: 4vw;
+  }
+  .company-description {
+    font-size: max(1.15rem, 2.25vw);
+    padding-bottom: 4vw;
+  }
+  .company-role {
+    font-size: max(1.15rem, 2.25vw);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main-description {
+    font-size: 15px;
+    width: 85%;
+  }
+  .resume-container {
+    width: 80%;
+  }
+  .resume-block {
+    width: 100%;
+  }
+  .company-name {
+    font-size: max(2rem, 3.75vw);
+    padding-bottom: 7.5vw;
+  }
+  .company-description {
+    font-size: max(1.15rem, 2.25vw);
+    padding-bottom: 7.5vw;
+  }
+  .company-role {
+    font-size: max(1.15rem, 2.25vw);
+  }
 }
 </style>

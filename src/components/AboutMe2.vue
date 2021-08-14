@@ -1,13 +1,29 @@
 <template>
   <div class="container">
     <div class="left">
-      <div class="title-description">Fun Facts</div>
-      <span class="description"
-        >Hobbies: volleyball, singing<br />Location: South Korea<br />MBTI:
-        ENTP</span
-      >
+      <div class="title-description"></div>
+      <div class="underline"></div>
+      <div class="description">
+        <span class="description-title"> Technical Skills: </span>
+        <br class="inbetween-break" />
+        <span class="description-details">
+          Python, Java, C, HTML, CSS, Javascript, React Native, Vue.js, RISC-V,
+          Swift, R, Stata <br />
+        </span>
+        <span class="description-title">Background: </span>
+        <br class="inbetween-break" />
+        <span class="description-details">
+          Consulting, Front end web development, App development, Management
+          <br />
+        </span>
+        <span class="description-title">
+          Currently studying / working on:
+        </span>
+        <br class="inbetween-break" />
+        <span class="description-details"> Back end development <br /> </span>
+      </div>
       <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
-        ><div class="experiences-link">Click here for my experiences</div>
+        ><div class="experiences-link">Click here for my experiences!</div>
       </router-link>
     </div>
     <div class="right">
@@ -26,11 +42,19 @@ export default {
 
 <style scoped>
 .container {
-  color: white;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex: 1;
+}
+br {
+  display: block;
+  content: "";
+  margin-top: 2vw;
+}
+.inbetween-break {
+  display: block;
+  content: "";
+  margin-top: 1vw;
 }
 .left {
   width: 55%;
@@ -39,22 +63,32 @@ export default {
   flex-direction: column;
 }
 .title-description {
-  font-size: 40px;
-  padding-top: 10%;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  padding-top: 12.5%;
   padding-left: 15%;
+}
+.underline {
   border-bottom: 1px white solid;
-  width: 40%;
+  width: 65%;
 }
 .description {
-  font-size: 25px;
-  padding-top: 15%;
+  font-size: max(0.75rem, 2.1vw);
+  padding-top: 10%;
   padding-left: 15%;
+}
+.description-title {
+  color: #aed9e0;
+  font-weight: 500;
+}
+.description-details {
+  color: white;
+  font-size: max(0.65rem, 1.85vw);
 }
 .experiences-link {
   margin-top: 20px;
   margin-left: 15%;
   color: #c6c6c6;
-  font-size: 20px;
+  font-size: max(0.75rem, 1.75vw);
   border-bottom: 1px white solid;
   width: max-content;
 }
@@ -72,5 +106,36 @@ export default {
   width: 100%;
   position: relative;
   top: -20%;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    margin-bottom: 50px;
+  }
+  br {
+    margin-top: 30px;
+  }
+  .inbetween-break {
+    margin-top: 0px;
+  }
+  .left {
+    width: 90%;
+  }
+  .description {
+    font-size: min(2.15rem, 8vw);
+    padding-left: 5%;
+  }
+  .description-details {
+    font-size: min(1.2rem, 5vw);
+  }
+  .experiences-link {
+    margin-top: 10px;
+    font-size: min(1.1rem, 4.5vw);
+  }
+  .right {
+    display: none;
+  }
+  .my-image {
+    display: none;
+  }
 }
 </style>

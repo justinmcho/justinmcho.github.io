@@ -11,40 +11,41 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div class="nav-buttons" v-show="!mobile">
-        <!-- <router-link
+        <router-link
+          class="header-button"
           id="header-button-home"
           :to="{ name: 'Home' }"
-          style="text-decoration: none; color: white"
+          style="text-decoration: none"
           >Home</router-link
-        > -->
-        <v-btn rounded="lg" :to="{ name: 'Home' }" id="header-button-home"
-          >Home</v-btn
         >
-        <v-btn rounded="lg" @click="scrollToAboutMe" id="header-button-aboutme"
-          >About Me</v-btn
+        <button
+          @click="scrollToAboutMe"
+          class="header-button"
+          id="header-button-aboutme"
         >
-        <v-btn
-          rounded="lg"
-          :to="{ name: 'Experience' }"
+          About Me
+        </button>
+        <router-link
+          class="header-button"
           id="header-button-experience"
-          >Experience</v-btn
+          :to="{ name: 'Experience' }"
+          style="text-decoration: none"
+          >Experiences</router-link
         >
-        <!-- <v-btn
-          rounded="lg"
-          style="color: white"
-          :to="{ name: 'Blog' }"
+        <a
+          class="header-button"
           id="header-button-blog"
-          @click="blur"
-          disabled
-          >Blog</v-btn
-        > -->
+          href="https://blog.naver.com/justinmcho99"
+          style="text-decoration: none"
+          >Blog</a
+        >
 
         <!-- <v-btn class="text-white" size="small">KOR</v-btn>
         <v-divider vertical></v-divider>
         <v-btn class="text-white" size="small">ENG</v-btn> -->
       </div>
       <v-btn icon @click="toggleDrawerNav" v-show="mobile"
-        ><v-icon color="white">mdi-menu</v-icon></v-btn
+        ><v-icon id="drawerNav" color="black">mdi-menu</v-icon></v-btn
       >
     </v-app-bar>
     <v-navigation-drawer
@@ -54,18 +55,79 @@
       color="transparent"
       elevation="0"
     >
-      <v-list nav dense style="background-color: white">
+      <v-list nav dense style="background-color: white; z-index: 5">
         <v-list-item>
-          <v-list-item-title>Home</v-list-item-title>
+          <button @click="toggleDrawerNav" class="nav-link">
+            <router-link
+              :to="{ name: 'Home' }"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+              >Home</router-link
+            >
+          </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>About Me</v-list-item-title>
+          <button
+            rounded="lg"
+            @click="scrollToAboutMe"
+            id="header-button-aboutme"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
+          >
+            About Me
+          </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>Experience</v-list-item-title>
+          <button
+            @click="toggleDrawerNav"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
+          >
+            <router-link
+              :to="{ name: 'Experience' }"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+              >Experiences</router-link
+            >
+          </button>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title>Blog</v-list-item-title>
+          <button
+            @click="toggleDrawerNav"
+            style="
+              text-decoration: none;
+              color: black;
+              display: inline-block;
+              width: 100%;
+            "
+          >
+            <a
+              href="https://blog.naver.com/justinmcho99"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+              >Blog</a
+            >
+          </button>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -92,7 +154,7 @@ export default {
   methods: {
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      if (this.windowWidth <= 815) {
+      if (this.windowWidth <= 850) {
         this.mobile = true;
         return;
       } else {
@@ -109,6 +171,9 @@ export default {
       element.scrollIntoView({ behavior: "smooth", block: "center" });
     },
     scrollToAboutMe() {
+      if (this.mobile) {
+        this.toggleDrawerNav();
+      }
       var element = document.getElementById("about-me");
       if (this.currentRoute !== "Home") {
         this.$router.push(
@@ -141,19 +206,38 @@ export default {
 }
 .nav-title {
   color: white !important;
-  pointer-events: all;
 }
-.nav-buttons {
-  margin-right: 5vw;
-  pointer-events: all;
+.header-button {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: 0.5s ease;
+  border-radius: 6px;
+  font-size: 17.5px;
+}
+.header-button:hover {
+  background-color: rgba(204, 204, 204, 0.2);
 }
 .v-btn {
   background-color: transparent;
 }
-.v-btn-overlay {
-  display: none;
+.nav-buttons {
+  margin-right: 5vw;
 }
-.why.v-btn:focus::before {
-  opacity: 0 !important;
+.nav-link {
+  display: flex;
+  flex: 1;
+}
+@media only screen and (min-width: 1050px) {
+  .nav-title {
+    margin-left: 10vw;
+  }
+  .nav-buttons {
+    margin-right: 10vw;
+  }
 }
 </style>
