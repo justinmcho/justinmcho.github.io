@@ -6,7 +6,7 @@
         community. He has previously served as President of Korean Business
         Organization (co-founded) and Association of Korean Artists, CTO of
         UpSync Consulting, and Chief of Staff of the ASUC CFO Office. Please
-        email justinmcho.k@gmail.com for more information (such as resume).
+        email justinmcho.k@gmail.com more information (such as resume).
       </span>
       <!-- <span>
         Click
