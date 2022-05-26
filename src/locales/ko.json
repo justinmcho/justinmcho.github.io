@@ -1,3 +1,19 @@
 {
-    "message": "안녕!"
-}
+    "message": "안녕!",
+    "header": {
+      "main": "조민기 JUSTIN CHO",
+      "home": "홈",
+      "about-me": "나에 대해서",
+      "experiences": "이력",
+      "blog": "블로그"
+    },
+    "moving-text": {
+        "intro": "안녕하세요 저는 ",
+        "detail": [
+          "조민기입니다.",
+          "창업가입니다.",
+          "개발자입니다.",
+          "UC버클리 재학생입니다."
+        ]
+      }
+  }

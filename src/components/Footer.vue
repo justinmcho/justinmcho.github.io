@@ -1,6 +1,7 @@
 <template>
   <div class="footer-container">
     © Justin Min Gi Cho 2022 | justinmcho.k@gmail.com
+    {{$t('message')}}
   </div>
 </template>
 

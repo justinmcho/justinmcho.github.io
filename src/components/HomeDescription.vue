@@ -5,7 +5,7 @@
       <span class="cursor"></span>
     </div>
     <div class="description">
-      I develop ideas for a purpose and <br />
+      I develop ideas for a change and <br />
       share them with my community.
     </div>
   </div>
@@ -16,11 +16,21 @@
 export default {
   name: "HomeDescription",
   components: {},
+  computed: {
+    intro() {
+      return this.$t('moving-text.intro')
+      // return "";
+    },
+    // 한국어랑 영어 왔다갔다 할려면 intro는 비어야 잘 작동
+    // nameArray() {
+    //   return this.$t('moving-text.detail')
+    // }
+  },
   data() {
     return {
       currentName: "",
       currentIntro: "",
-      intro: "Hi, I'm ",
+      // intro: "Hi, I'm ",
       nameArray: [
         "Justin.",
         "an entrepreneur.",
@@ -34,6 +44,12 @@ export default {
       typing: true,
       introFinished: false,
     };
+  },
+  watch: {
+    intro(newIntro, oldIntro) {
+      // this.currentIntro = ""
+      // this.currentName = ""
+    }
   },
   methods: {
     initiate(charIndex) {

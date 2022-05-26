@@ -6,7 +6,7 @@
           id="header-title"
           :to="{ name: 'Home' }"
           style="text-decoration: none"
-          >JUSTIN MIN GI CHO</router-link
+          >{{$t('header.main')}}</router-link
         >
       </v-app-bar-title>
       <v-spacer></v-spacer>
@@ -16,33 +16,46 @@
           id="header-button-home"
           :to="{ name: 'Home' }"
           style="text-decoration: none"
-          >Home</router-link
+          >{{$t('header.home')}}</router-link
         >
         <button
           @click="scrollToAboutMe"
           class="header-button"
           id="header-button-aboutme"
         >
-          About Me
+          {{$t('header.about-me')}}
         </button>
         <router-link
           class="header-button"
           id="header-button-experience"
           :to="{ name: 'Experience' }"
           style="text-decoration: none"
-          >Experiences</router-link
+          >{{$t('header.experiences')}}</router-link
         >
         <a
           class="header-button"
           id="header-button-blog"
           href="https://blog.naver.com/justinmcho99"
           style="text-decoration: none"
-          >Blog</a
+          >{{$t('header.blog')}}</a
         >
-
-        <!-- <v-btn class="text-white" size="small">KOR</v-btn>
+        <button
+          @click="$i18n.locale='ko'"
+          class="language-button"
+          id="language-button-aboutme"
+        >
+          한국어
+        </button>
         <v-divider vertical></v-divider>
-        <v-btn class="text-white" size="small">ENG</v-btn> -->
+        <button
+          @click="$i18n.locale='en'"
+          class="language-button"
+          id="language-button-aboutme"
+        >
+          ENG
+        </button>
+        <!-- <v-btn class="text-white" size="small">KOR</v-btn> -->
+        <!-- <v-btn class="text-white" size="small">ENG</v-btn> -->
       </div>
       <v-btn icon @click="toggleDrawerNav" v-show="mobile"
         ><v-icon id="drawerNav" color="black">mdi-menu</v-icon></v-btn
@@ -220,6 +233,21 @@ export default {
   font-size: 17.5px;
 }
 .header-button:hover {
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.language-button {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: 0.5s ease;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.language-button:hover {
   background-color: rgba(204, 204, 204, 0.2);
 }
 .v-btn {

@@ -1,3 +1,19 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "header": {
+    "main": "JUSTIN MIN GI CHO",
+    "home": "Home",
+    "about-me": "About Me",
+    "experiences": "Experiences",
+    "blog": "Blog"
+  },
+  "moving-text": {
+    "intro": "Hi, I'm ",
+    "detail": [
+      "Justin.",
+      "an entrepreneur.",
+      "a programmer.",
+      "from UC Berkeley."
+    ]
+  }
 }
