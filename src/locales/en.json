@@ -1,5 +1,4 @@
 {
-  "message": "hello i18n !!",
   "header": {
     "main": "JUSTIN MIN GI CHO",
     "home": "Home",
@@ -15,5 +14,29 @@
       "a programmer.",
       "from UC Berkeley."
     ]
+  },
+  "home-description": {
+    "first-line": "I develop ideas for a change and",
+    "second-line": "share them with my community."
+  },
+  "about-me": {
+    "header-white-1": "I'm an ",
+    "header-blue-1": "engineer",
+    "header-white-2": "studying",
+    "header-blue-2": "management",
+    "body": "I’ve always had a fascination for building new ideas. I am a junior studying computer science and economics at UC Berkeley. Right now, I am taking a gap year(s) in Korea to take on internships from various industries and to serve in the Korean military.",
+    "name": "Justin Min Gi Cho"
+  },
+  "bottom-portion": {
+    "tech": "Technical Skills:",
+    "tech-description": "Python, Java, C, HTML, CSS, Javascript, React Native, Vue.js, RISC-V, Swift, R, Stata",
+    "background": "Background:",
+    "background-description": "Consulting, Front end web development, App development, Entrepreneurship",
+    "currently": "Currently studying / working on:",
+    "currently-description": "Back-end development",
+    "click-here": "Click here for my experiences!"
+  },
+  "experience": {
+    "body": "Justin Min Gi Cho develops ideas for a purpose and shares them with his community. He has previously served as President of Korean Business Organization (co-founded) and Association of Korean Artists, CTO of UpSync Consulting, and Chief of Staff of the ASUC CFO Office."
   }
 }

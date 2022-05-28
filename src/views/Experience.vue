@@ -2,11 +2,7 @@
   <div class="container">
     <div class="content-container">
       <span class="main-description">
-        Justin Min Gi Cho develops ideas for a purpose and shares them with his
-        community. He has previously served as President of Korean Business
-        Organization (co-founded) and Association of Korean Artists, CTO of
-        UpSync Consulting, and Chief of Staff of the ASUC CFO Office. Please
-        email justinmcho.k@gmail.com for more information (such as resume).
+        {{$t('experience.body')}}
       </span>
       <!-- <span>
         Click
@@ -141,6 +137,9 @@ export default {
     document.getElementById("header-button-aboutme").style.color = "black";
     document.getElementById("header-button-experience").style.color = "#87c7ed";
     document.getElementById("header-button-blog").style.color = "black";
+    document.getElementById("language-button-aboutme").style.color = "black";
+    document.getElementById("language-button-aboutme2").style.color = "black";
+
     var drawerNav = document.getElementById("drawerNav");
     drawerNav.classList.remove("text-white");
     drawerNav.classList.add("text-black");

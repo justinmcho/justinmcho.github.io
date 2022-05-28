@@ -6,7 +6,7 @@
         style="display: flex; flex-direction: row; align-items: center"
         class="social-container"
       >
-        <span class="name">Justin Min Gi Cho</span>
+        <span class="name">{{$t('about-me.name')}}</span>
         <div>
           <a href="https://github.com/justinmcho" target="_blank">
             <img
@@ -39,14 +39,11 @@
         alt="JMC Logo"
       />
       <div class="title-description">
-        I'm an <span style="color: #aed9e0">engineer </span>studying
-        <span style="color: #aed9e0">management</span>
+        {{$t('about-me.header-white-1')}} <span style="color: #aed9e0">{{$t('about-me.header-blue-1')}} </span>{{$t('about-me.header-white-2')}} <br/>
+        <span style="color: #aed9e0">{{$t('about-me.header-blue-2')}}</span>
       </div>
       <div class="description">
-        I’ve always had a fascination for building new ideas. I am a junior
-        studying computer science and economics at UC Berkeley. Right now, I am
-        taking a gap year(s) in Korea to take on internships from various
-        industries and to serve in the Korean military.
+        {{$t('about-me.body')}}
       </div>
     </div>
   </div>

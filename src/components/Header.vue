@@ -40,20 +40,22 @@
           >{{$t('header.blog')}}</a
         >
         <button
+          v-show= "$i18n.locale == 'en'"
           @click="$i18n.locale='ko'"
           class="language-button"
           id="language-button-aboutme"
         >
           한국어
         </button>
-        <v-divider vertical></v-divider>
         <button
+          v-show= "$i18n.locale == 'ko'"
           @click="$i18n.locale='en'"
           class="language-button"
-          id="language-button-aboutme"
+          id="language-button-aboutme2"
         >
           ENG
         </button>
+        <v-divider vertical></v-divider>
         <!-- <v-btn class="text-white" size="small">KOR</v-btn> -->
         <!-- <v-btn class="text-white" size="small">ENG</v-btn> -->
       </div>
@@ -248,7 +250,7 @@ export default {
   font-size: 15px;
 }
 .language-button:hover {
-  background-color: rgba(204, 204, 204, 0.2);
+  background-color: rgba(204, 204, 204, 0.5);
 }
 .v-btn {
   background-color: transparent;

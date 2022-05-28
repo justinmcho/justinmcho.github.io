@@ -5,8 +5,8 @@
       <span class="cursor"></span>
     </div>
     <div class="description">
-      I develop ideas for a change and <br />
-      share them with my community.
+      {{$t('home-description.first-line')}} <br />
+      {{$t('home-description.second-line')}}
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   components: {},
   computed: {
     intro() {
-      return this.$t('moving-text.intro')
+      return "Hi, I'm "
       // return "";
     },
     // 한국어랑 영어 왔다갔다 할려면 intro는 비어야 잘 작동
@@ -47,8 +47,12 @@ export default {
   },
   watch: {
     intro(newIntro, oldIntro) {
-      // this.currentIntro = ""
-      // this.currentName = ""
+      if (this.introFinished) {
+        this.currentIntro = this.intro
+      } else {
+        this.currentIntro = ""
+      }
+      // this.initiate(0);
     }
   },
   methods: {

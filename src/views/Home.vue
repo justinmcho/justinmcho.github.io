@@ -40,6 +40,9 @@ export default {
     document.getElementById("header-button-aboutme").style.color = "white";
     document.getElementById("header-button-experience").style.color = "white";
     document.getElementById("header-button-blog").style.color = "white";
+    document.getElementById("language-button-aboutme").style.color = "white";
+    document.getElementById("language-button-aboutme2").style.color = "white";
+
     var drawerNavElement = document.querySelector("#drawerNav");
     if (drawerNavElement.classList.contains("text-black")) {
       drawerNav.classList.remove("text-black");
