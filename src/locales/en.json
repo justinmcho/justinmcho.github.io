@@ -37,6 +37,51 @@
     "click-here": "Click here for my experiences!"
   },
   "experience": {
-    "body": "Justin Min Gi Cho develops ideas for a purpose and shares them with his community. He has previously served as President of Korean Business Organization (co-founded) and Association of Korean Artists, CTO of UpSync Consulting, and Chief of Staff of the ASUC CFO Office."
+    "body": "Justin Min Gi Cho develops ideas for a purpose and shares them with his community. He has previously served as President of Korean Business Organization (co-founded) and Association of Korean Artists, CTO of UpSync Consulting, and Chief of Staff of the ASUC CFO Office.",
+    "alchera": {
+      "name": "Alchera",
+      "description": "Alchera is an AI company that specializes in face recognition and image anomaly.",
+      "role": "Software Development / Strategy"
+    },
+    "illuner": {
+      "name": "illuner",
+      "description": "illuner is a startup that helps college students in Korea order food.",
+      "role": "CEO / Software / Strategy"
+    },
+    "kbo": {
+      "name": "Korean Business Organization",
+      "description": "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
+      "role": "President / Co-founder / Entrepreneurship"
+    },
+    "upsync": {
+      "name": "UpSync Consulting",
+      "description": "UpSync Consulting is a premier technology consulting organization at UC Berkeley.",
+      "role": "CTO / Project Management / Consulting"
+    },
+    "asuc": {
+      "name": "ASUC",
+      "description": "The Associated Students of the University of California (ASUC) is the student government of UC Berkeley.",
+      "role": "Chief of Staff to the CFO / Funds Management"
+    },
+    "aka": {
+      "name": "Association of Korean Artists",
+      "description": "Association of Korean Artists is a UC Berkeley hiphop/vocal music group.",
+      "role": "President / Management / Singing"
+    },
+    "mccann": {
+      "name": "McCann",
+      "description": "McCann is a global advertising firm that provides marketing services for companies.",
+      "role": "Account Management / Marketing"
+    },
+    "ak-interactive": {
+      "name": "AK Interactive",
+      "description": "AK Interactive is a game company that maintains the game 'The Merchant'.",
+      "role": "Project Management / Software"
+    },
+    "justinmcho": {
+      "name": "justinmcho.com",
+      "description": "I used HTML, CSS, Javascript, Vue 3, Adobe XD, and Github Pages to create this website.",
+      "role": "Design / Software"
+    }
   }
 }

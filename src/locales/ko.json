@@ -37,6 +37,51 @@
       "click-here": "이력"
     },
     "experience":{
-      "body": "UC버클리를 다니면서 한국경영협회 회장, 한국음악협회 회장, UpSync 컨설팅 CTO, 총학생회 Chief of Staff for the CFO를 맡았었습니다. 아래에는 다양한 인턴 경험들과 창업 경험들이 나와있습니다."
+      "body": "UC버클리를 다니면서 한국경영협회 회장, 한국음악협회 회장, UpSync 컨설팅 CTO, 총학생회 Chief of Staff for the CFO를 맡았었습니다. 아래에는 다양한 인턴 경험들과 창업 경험들이 나와있습니다.",
+      "alchera": {
+        "name": "알체라",
+        "description": "알체라는 AI 얼굴인식 및 이상상황 감지 회사입니다.",
+        "role": "소프트웨어 개발 / 기획"
+      },
+      "illuner": {
+        "name": "일루너",
+        "description": "일루너는 한국 대학생들을 위한 테이크아웃 서비스입니다.",
+        "role": "CEO / 소프트웨어 / 기획"
+      },
+      "kbo": {
+        "name": "한국경영협회",
+        "description": "한국경영협회는 UC버클리 동아리로 버클리를 다니는 한국인들을 위한 경영 커뮤니티입니다.",
+        "role": "회장 / 공동창립자 / 창업"
+      },
+      "upsync": {
+        "name": "UpSync 컨설팅",
+        "description": "UpSync 컨설팅은 UC버클리 기술 컨설팅 동아리입니다.",
+        "role": "CTO / 프로젝트 매니지먼트 / 컨설팅"
+      },
+      "asuc": {
+        "name": "총학생회 (ASUC)",
+        "description": "ASUC는 UC버클리 총학생회입니다. ASUC는 501C 비영리 단체로도 구분되고 있습니다.",
+        "role": "Chief of Staff to the CFO / 자금 관리"
+      },
+      "aka": {
+        "name": "한국음악협회",
+        "description": "한국음악협회는 UC버클리 힙합/보컬 동아리입니다.",
+        "role": "회장 / 매니지먼트 / 보컬"
+      },
+      "mccann": {
+        "name": "맥켄",
+        "description": "맥켄은 글로벌 마케팅 대행사입니다.",
+        "role": "클라이언트 관리 / 마케팅"
+      },
+      "ak-interactive": {
+        "name": "에이케이인터렉티브",
+        "description": "에이케이인터렉티브는 천하제일상 거상을 운영하는 게임회사입니다.",
+        "role": "프로젝트 매니지먼트 / 소프트웨어 개발"
+      },
+      "justinmcho": {
+        "name": "justinmcho.com",
+        "description": "개인 웹사이트 디자인은 Adobe XD로 만들었으며 프로그래밍 언어는 HTML, CSS, Javascript, Vue 3, 그리고 Github Pages를 사용했습니다.",
+        "role": "디자인 / 소프트웨어 개발"
+      }
     }
   }

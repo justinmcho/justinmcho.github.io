@@ -52,84 +52,144 @@ import Footer from "../components/Footer.vue";
 
 export default {
   name: "Experience",
-  data() {
-    return {
-      resumeBlocks: [
+  computed: {
+    resumeBlocks() {
+      return [
         {
-          companyName: "Alchera",
-          description:
-            "Alchera is an AI company that specializes in face recognition and image anomaly.",
-          role: "Software Development / Strategy",
+          companyName: this.$t('experience.alchera.name'),
+          description: this.$t('experience.alchera.description'),
+          role: this.$t('experience.alchera.role'),
           image: "alchera-logo.png",
           href: "https://alcherainc.com/",
         },
         {
-          companyName: "illuner",
-          description:
-            "illuner is a startup that helps college students in Korea order food.",
-          role: "CEO / Software / Strategy",
+          companyName: this.$t('experience.illuner.name'),
+          description: this.$t('experience.illuner.description'),
+          role: this.$t('experience.illuner.role'),
           image: "illuner-logo.png",
           href: "https://www.linkedin.com/company/illuner",
         },
         {
-          companyName: "Korean Business Organization",
-          description:
-            "KBO is a UC Berkeley organization that serves as a community for students interested in business.",
-          role: "President / Management / Entrepreneurship",
+          companyName: this.$t('experience.kbo.name'),
+          description: this.$t('experience.kbo.description'),
+          role: this.$t('experience.kbo.role'),
           image: "kbo-logo.png",
           href: "https://www.kboberkeley.com/",
         },
         {
-          companyName: "UpSync Consulting",
-          description:
-            "UpSync Consulting is a premier technology consulting organization at UC Berkeley.",
-          role: "CTO / Management / Consulting",
+          companyName: this.$t('experience.upsync.name'),
+          description: this.$t('experience.upsync.description'),
+          role: this.$t('experience.upsync.role'),
           image: "upsync-logo.png",
           href: "https://www.upsyncberkeley.com/",
         },
         {
-          companyName: "ASUC",
-          description:
-            "The Associated Students of the University of California (ASUC) is the student government of UC Berkeley.",
-          role: "Chief of Staff to the CFO / Funds Management",
+          companyName: this.$t('experience.asuc.name'),
+          description: this.$t('experience.asuc.description'),
+          role: this.$t('experience.asuc.role'),
           image: "asuc-logo.png",
           href: "https://asuc.org/",
         },
         {
-          companyName: "Association of Korean Artists",
-          description:
-            "Association of Korean Artists is a UC Berkeley hiphop/vocal music group.",
-          role: "President / Management / Singing",
+          companyName: this.$t('experience.aka.name'),
+          description: this.$t('experience.aka.description'),
+          role: this.$t('experience.aka.role'),
           image: "aka-logo.png",
           href: "https://callink.berkeley.edu/organization/associationofkoreanartists",
         },
         {
-          companyName: "McCann",
-          description:
-            "McCann is a global advertising firm that provides marketing services for companies.",
-          role: "Account Management / Marketing",
+          companyName: this.$t('experience.mccann.name'),
+          description: this.$t('experience.mccann.description'),
+          role: this.$t('experience.mccann.role'),
           image: "mccann-logo.png",
           href: "http://www.mccann.co.kr/",
         },
         {
-          companyName: "AK Interactive",
-          description:
-            "AK Interactive is a game company that maintains the game ‘The Merchant’.",
-          role: "Project Management / Software",
+          companyName: this.$t('experience.ak-interactive.name'),
+          description: this.$t('experience.ak-interactive.description'),
+          role: this.$t('experience.ak-interactive.role'),
           image: "akinteractive-logo.png",
           href: "http://www.akinteractive.co.kr/kor/main.gs",
         },
         {
-          companyName: "justinmcho.com",
-          description:
-            "I used HTML, CSS, Javascript, Vue 3, Adobe XD, and Github Pages to create this website.",
-          role: "Design / Software",
+          companyName: this.$t('experience.justinmcho.name'),
+          description: this.$t('experience.justinmcho.description'),
+          role: this.$t('experience.justinmcho.role'),
           image: "jmc-logo.png",
           href: "https://blog.naver.com/justinmcho99/222463829656",
         },
-      ],
-    };
+      ]
+    }
   },
+  // data() {
+  //   return {
+  //     resumeBlocks: [
+  //       {
+  //         companyName: this.$t('experience.alchera.name'),
+  //         description: this.$t('experience.alchera.description'),
+  //         role: this.$t('experience.alchera.role'),
+  //         image: "alchera-logo.png",
+  //         href: "https://alcherainc.com/",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.illuner.name'),
+  //         description: this.$t('experience.illuner.description'),
+  //         role: this.$t('experience.illuner.role'),
+  //         image: "illuner-logo.png",
+  //         href: "https://www.linkedin.com/company/illuner",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.kbo.name'),
+  //         description: this.$t('experience.kbo.description'),
+  //         role: this.$t('experience.kbo.role'),
+  //         image: "kbo-logo.png",
+  //         href: "https://www.kboberkeley.com/",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.upsync.name'),
+  //         description: this.$t('experience.upsync.description'),
+  //         role: this.$t('experience.upsync.role'),
+  //         image: "upsync-logo.png",
+  //         href: "https://www.upsyncberkeley.com/",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.asuc.name'),
+  //         description: this.$t('experience.asuc.description'),
+  //         role: this.$t('experience.asuc.role'),
+  //         image: "asuc-logo.png",
+  //         href: "https://asuc.org/",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.aka.name'),
+  //         description: this.$t('experience.aka.description'),
+  //         role: this.$t('experience.aka.role'),
+  //         image: "aka-logo.png",
+  //         href: "https://callink.berkeley.edu/organization/associationofkoreanartists",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.mccann.name'),
+  //         description: this.$t('experience.mccann.description'),
+  //         role: this.$t('experience.mccann.role'),
+  //         image: "mccann-logo.png",
+  //         href: "http://www.mccann.co.kr/",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.ak-interactive.name'),
+  //         description: this.$t('experience.ak-interactive.description'),
+  //         role: this.$t('experience.ak-interactive.role'),
+  //         image: "akinteractive-logo.png",
+  //         href: "http://www.akinteractive.co.kr/kor/main.gs",
+  //       },
+  //       {
+  //         companyName: this.$t('experience.justinmcho.name'),
+  //         description: this.$t('experience.justinmcho.description'),
+  //         role: this.$t('experience.justinmcho.role'),
+  //         image: "jmc-logo.png",
+  //         href: "https://blog.naver.com/justinmcho99/222463829656",
+  //       },
+  //     ],
+  //   };
+  // },
   components: { Footer },
   mounted() {
     document.getElementById("header-title").style.color = "black";
