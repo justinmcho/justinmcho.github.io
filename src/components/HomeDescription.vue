@@ -142,7 +142,7 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: row;
-  margin-bottom: 1vh 
+  margin-bottom: 0.75vh 
 }
 .title {
   color: white;
