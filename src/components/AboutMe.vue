@@ -39,8 +39,8 @@
         alt="JMC Logo"
       />
       <div class="title-description">
-        {{$t('about-me.header-white-1')}} <span style="color: #aed9e0">{{$t('about-me.header-blue-1')}} </span>{{$t('about-me.header-white-2')}} <br/>
-        <span style="color: #aed9e0">{{$t('about-me.header-blue-2')}}</span>
+        {{$t('about-me.header-white-1')}} <span style="color: #aed9e0">{{$t('about-me.header-blue-1')}} </span>{{$t('about-me.header-white-2')}}
+        <span style="color: #aed9e0; word-break: keep-all;">{{$t('about-me.header-blue-2')}}</span>
       </div>
       <div class="description">
         {{$t('about-me.body')}}

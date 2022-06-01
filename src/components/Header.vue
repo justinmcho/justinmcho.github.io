@@ -81,7 +81,7 @@
                 display: inline-block;
                 width: 100%;
               "
-              >Home</router-link
+              >{{$t('header.home')}}</router-link
             >
           </button>
         </v-list-item>
@@ -97,7 +97,7 @@
               width: 100%;
             "
           >
-            About Me
+            {{$t('header.about-me')}}
           </button>
         </v-list-item>
         <v-list-item>
@@ -118,7 +118,7 @@
                 display: inline-block;
                 width: 100%;
               "
-              >Experiences</router-link
+              >{{$t('header.experiences')}}</router-link
             >
           </button>
         </v-list-item>
@@ -140,8 +140,40 @@
                 display: inline-block;
                 width: 100%;
               "
-              >Blog</a
+              >{{$t('header.blog')}}</a
             >
+          </button>
+        </v-list-item>
+        <v-list-item>
+          <button @click="toggleDrawerNav" class="nav-link">
+            <button
+              v-show= "$i18n.locale == 'en'"
+              @click="$i18n.locale='ko'"
+              class="language-button"
+              id="language-button-aboutme"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+            >
+            한국어
+            </button>
+            <button
+              v-show= "$i18n.locale == 'ko'"
+              @click="$i18n.locale='en'"
+              class="language-button"
+              id="language-button-aboutme2"
+              style="
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 100%;
+              "
+            >
+            ENG
+            </button>
           </button>
         </v-list-item>
       </v-list>
