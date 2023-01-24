@@ -38,13 +38,18 @@
     },
     "experience":{
       "body": "UC버클리를 다니면서 한국경영협회 회장, 한국음악협회 회장, UpSync 컨설팅 CTO, 총학생회 Chief of Staff for the CFO를 맡았었습니다. 아래에는 다양한 인턴 경험들과 창업 경험들이 나와있습니다.",
+      "ocena": {
+        "name": "오세나 | ocena",
+        "description": "오세나는 온라인 견적서 제작, 관리, 공유 과정으 최적화하는 소프트웨어입니다.",
+        "role": "Co-founder / Software / Strategy"
+        },        
       "alchera": {
         "name": "알체라",
         "description": "알체라는 AI 얼굴인식 및 이상상황 감지 회사입니다.",
         "role": "소프트웨어 개발 / 기획"
       },
       "illuner": {
-        "name": "일루너",
+        "name": "일루너 | illuner",
         "description": "일루너는 한국 대학생들을 위한 테이크아웃 서비스입니다.",
         "role": "CEO / 소프트웨어 / 기획"
       },

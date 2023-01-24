@@ -1,6 +1,6 @@
 <template>
   <div class="footer-container">
-    © Justin Min Gi Cho 2022 | justinmcho.k@gmail.com
+    © Justin Min Gi Cho 조민기 2023 | justinmcho.k@gmail.com
   </div>
 </template>
 

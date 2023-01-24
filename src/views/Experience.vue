@@ -56,6 +56,13 @@ export default {
     resumeBlocks() {
       return [
         {
+          companyName: this.$t('experience.ocena.name'),
+          description: this.$t('experience.ocena.description'),
+          role: this.$t('experience.ocena.role'),
+          image: "ocena-logo.png",
+          href: "https://ocena.app",
+        },
+        {
           companyName: this.$t('experience.alchera.name'),
           description: this.$t('experience.alchera.description'),
           role: this.$t('experience.alchera.role'),

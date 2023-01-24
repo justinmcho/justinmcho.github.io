@@ -38,6 +38,11 @@
   },
   "experience": {
     "body": "Justin Min Gi Cho develops ideas for a purpose and shares them with his community. He has previously served as President of Korean Business Organization (co-founded) and Association of Korean Artists, CTO of UpSync Consulting, and Chief of Staff of the ASUC CFO Office.",
+    "ocena": {
+      "name": "ocena",
+      "description": "ocena is an Online Saas tool for accelerating quote creation, management, and delivery.",
+      "role": "Co-founder / Software / Strategy"
+    },
     "alchera": {
       "name": "Alchera",
       "description": "Alchera is an AI company that specializes in face recognition and image anomaly.",
