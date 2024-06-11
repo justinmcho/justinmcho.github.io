@@ -5,8 +5,8 @@
       <span class="cursor"></span>
     </div>
     <div class="description">
-      I develop ideas for a purpose and <br />
-      share them with my community.
+      {{$t('home-description.first-line')}} <br />
+      {{$t('home-description.second-line')}}
     </div>
   </div>
 </template>
@@ -16,11 +16,21 @@
 export default {
   name: "HomeDescription",
   components: {},
+  computed: {
+    intro() {
+      return "Hi, I'm "
+      // return "";
+    },
+    // 한국어랑 영어 왔다갔다 할려면 intro는 비어야 잘 작동
+    // nameArray() {
+    //   return this.$t('moving-text.detail')
+    // }
+  },
   data() {
     return {
       currentName: "",
       currentIntro: "",
-      intro: "Hi, I'm ",
+      // intro: "Hi, I'm ",
       nameArray: [
         "Justin.",
         "an entrepreneur.",
@@ -34,6 +44,16 @@ export default {
       typing: true,
       introFinished: false,
     };
+  },
+  watch: {
+    intro(newIntro, oldIntro) {
+      if (this.introFinished) {
+        this.currentIntro = this.intro
+      } else {
+        this.currentIntro = ""
+      }
+      // this.initiate(0);
+    }
   },
   methods: {
     initiate(charIndex) {
@@ -122,6 +142,7 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: row;
+  margin-bottom: 0.75vh 
 }
 .title {
   color: white;

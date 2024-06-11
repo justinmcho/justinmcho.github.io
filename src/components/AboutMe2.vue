@@ -4,26 +4,25 @@
       <div class="title-description"></div>
       <div class="underline"></div>
       <div class="description">
-        <span class="description-title"> Technical Skills: </span>
+        <span class="description-title"> {{$t('bottom-portion.tech')}} </span>
         <br class="inbetween-break" />
         <span class="description-details">
-          Python, Java, C, HTML, CSS, Javascript, React Native, Vue.js, RISC-V,
-          Swift, R, Stata <br />
+          {{$t('bottom-portion.tech-description')}} <br />
         </span>
-        <span class="description-title">Background: </span>
+        <span class="description-title">{{$t('bottom-portion.background')}} </span>
         <br class="inbetween-break" />
         <span class="description-details">
-          Consulting, Front end web development, App development, Management
+          {{$t('bottom-portion.background-description')}}
           <br />
         </span>
         <span class="description-title">
-          Currently studying / working on:
+          {{$t('bottom-portion.currently')}}
         </span>
         <br class="inbetween-break" />
-        <span class="description-details"> Back end development <br /> </span>
+        <span class="description-details"> {{$t('bottom-portion.currently-description')}} <br /> </span>
       </div>
       <router-link :to="{ name: 'Experience' }" style="text-decoration: none"
-        ><div class="experiences-link">Click here for my experiences!</div>
+        ><div class="experiences-link">{{$t('bottom-portion.click-here')}}</div>
       </router-link>
     </div>
     <div class="right">

@@ -8,9 +8,6 @@
         UpSync Consulting, and Chief of Staff of the ASUC CFO Office. Please
         email justinmcho.k@gmail.com for more information (such as resume).
       </span>
-<<<<<<< HEAD
-
-=======
       <!-- <span>
         Click
         <a
@@ -21,7 +18,6 @@
         >
         to open up a PDF version of my resume.
       </span> -->
->>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
       <div class="resume-container">
         <a
           v-for="company in resumeBlocks"
@@ -134,8 +130,6 @@ export default {
           image: "akinteractive-logo.png",
           href: "http://www.akinteractive.co.kr/kor/main.gs",
         },
-<<<<<<< HEAD
-=======
         {
           companyName: "justinmcho.com",
           description:
@@ -144,7 +138,6 @@ export default {
           image: "jmc-logo.png",
           href: "https://blog.naver.com/justinmcho99/222463829656",
         },
->>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
       ],
     };
   },
@@ -183,13 +176,8 @@ export default {
   align-items: center;
 }
 .main-description {
-<<<<<<< HEAD
-  font-size: 20px;
-  padding-bottom: 10vh;
-=======
   font-size: min(2vw, 20px);
   font-weight: 500;
->>>>>>> d7658103d408b9a090ef60950d983f5a426d5d6f
   text-align: start;
   width: 60%;
   margin-top: 50px;

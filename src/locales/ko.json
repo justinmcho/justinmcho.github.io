@@ -1,3 +1,92 @@
 {
-    "message": "안녕!"
-}
+    "header": {
+      "main": "조민기 JUSTIN CHO",
+      "home": "홈",
+      "about-me": "나에 대해서",
+      "experiences": "이력",
+      "blog": "블로그"
+    },
+    "moving-text": {
+        "intro": "안녕하세요 저는 ",
+        "detail": [
+          "조민기입니다.",
+          "창업가입니다.",
+          "개발자입니다.",
+          "UC버클리 재학생입니다."
+        ]
+    },
+    "home-description": {
+        "first-line": "안녕하세요. 저는 창업을 목표로 하고 있는",
+        "second-line": "UC버클리 대학생 조민기입니다."
+    },
+    "about-me": {
+      "header-white-1": "저는 ",
+      "header-blue-1": "경영을 ",
+      "header-white-2": "연습하는 ",
+      "header-blue-2": "개발자입니다",
+      "body": "어릴 때부터 항상 아이디어가 많았으며 코딩을 통해 한두 개씩 현실화하고 있습니다. 저는 지금 UC버클리에서 컴퓨터 공학/경제학을 복수전공하고 있습니다. 현재는 3학년까지 마무리하고 육군본부에서 군 복무 중입니다.",
+      "name": "조민기"
+    },
+    "bottom-portion": {
+      "tech": "사용하는 프로그래밍 언어:",
+      "tech-description": "Python, Java, C, HTML, CSS, Javascript, React Native, Vue.js, RISC-V, Swift, R, Stata",
+      "background": "Background:",
+      "background-description": "컨설팅, 프론트엔드 개발, 앱 개발, 창업",
+      "currently": "지금 공부중인 분야:",
+      "currently-description": "백엔드 개발",
+      "click-here": "이력"
+    },
+    "experience":{
+      "body": "UC버클리를 다니면서 한국경영협회 회장, 한국음악협회 회장, UpSync 컨설팅 CTO, 총학생회 Chief of Staff for the CFO를 맡았었습니다. 아래에는 다양한 인턴 경험들과 창업 경험들이 나와있습니다.",
+      "ocena": {
+        "name": "오세나 | ocena",
+        "description": "오세나는 온라인 견적서 제작, 관리, 공유 과정을 최적화하는 소프트웨어입니다.",
+        "role": "Co-founder / Software / Strategy"
+        },        
+      "alchera": {
+        "name": "알체라",
+        "description": "알체라는 AI 얼굴인식 및 이상상황 감지 회사입니다.",
+        "role": "소프트웨어 개발 / 기획"
+      },
+      "illuner": {
+        "name": "일루너 | illuner",
+        "description": "일루너는 한국 대학생들을 위한 테이크아웃 서비스입니다.",
+        "role": "CEO / 소프트웨어 / 기획"
+      },
+      "kbo": {
+        "name": "한국경영협회",
+        "description": "한국경영협회는 UC버클리 동아리로 버클리를 다니는 한국인들을 위한 경영 커뮤니티입니다.",
+        "role": "회장 / 공동창립자 / 창업"
+      },
+      "upsync": {
+        "name": "UpSync 컨설팅",
+        "description": "UpSync 컨설팅은 UC버클리 기술 컨설팅 동아리입니다.",
+        "role": "CTO / 프로젝트 매니지먼트 / 컨설팅"
+      },
+      "asuc": {
+        "name": "총학생회 (ASUC)",
+        "description": "ASUC는 UC버클리 총학생회입니다. ASUC는 501C 비영리 단체로도 구분되고 있습니다.",
+        "role": "Chief of Staff to the CFO / 자금 관리"
+      },
+      "aka": {
+        "name": "한국음악협회",
+        "description": "한국음악협회는 UC버클리 힙합/보컬 동아리입니다.",
+        "role": "회장 / 매니지먼트 / 보컬"
+      },
+      "mccann": {
+        "name": "맥켄",
+        "description": "맥켄은 글로벌 마케팅 대행사입니다.",
+        "role": "클라이언트 관리 / 마케팅"
+      },
+      "ak-interactive": {
+        "name": "에이케이인터렉티브",
+        "description": "에이케이인터렉티브는 천하제일상 거상을 운영하는 게임회사입니다.",
+        "role": "프로젝트 매니지먼트 / 소프트웨어 개발"
+      },
+      "justinmcho": {
+        "name": "justinmcho.com",
+        "description": "개인 웹사이트 디자인은 Adobe XD로 만들었으며 프로그래밍 언어는 HTML, CSS, Javascript, Vue 3, 그리고 Github Pages를 사용했습니다.",
+        "role": "디자인 / 소프트웨어 개발"
+      }
+    }
+  }
